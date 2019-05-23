@@ -1,0 +1,26 @@
+set(CMAKE_SYSTEM_NAME Linux)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+set(CMAKE_LIBRARY_ARCHITECTURE arm-linux-gnueabihf)
+
+#set(CMAKE_C_COMPILER arm-linux-gnueabihf-gcc-4.8)
+#set(CMAKE_CXX_COMPILER arm-linux-gnueabihf-g++-4.8)
+set(CMAKE_C_COMPILER /usr/bin/arm-linux-gnueabihf-gcc-5)
+set(CMAKE_CXX_COMPILER /usr/bin/arm-linux-gnueabihf-g++-5)
+#set(CMAKE_Fortran_COMPILER arm-linux-gnueabihf-gfortran)
+#set(CMAKE_AR arm-linux-gnueabihf-gcc-ar)
+#set(CMAKE_RANLIB arm-linux-gnueabihf-gcc-ranlib)
+#set(CMAKE_C_COMPILER gcc-arm-linux-gnueabihf)
+#set(CMAKE_CXX_COMPILER g++-arm-linux-gnueabihf)
+
+#MESSAGE(${CMAKE_HOST_SYSTEM_PROCESSOR})
+
+if (NOT (CMAKE_HOST_SYSTEM_PROCESSOR STREQUAL CMAKE_SYSTEM_PROCESSOR))
+    set(CMAKE_CROSSCOMPILING true)
+    set(CMAKE_FIND_ROOT_PATH_MODE_PROGRAM NEVER)
+    set(CMAKE_FIND_ROOT_PATH_MODE_LIBRARY ONLY)
+    set(CMAKE_FIND_ROOT_PATH_MODE_INCLUDE ONLY)
+endif ()
+
+if (CMAKE_SYSTEM_PROCESSOR  STREQUAL  arm)
+		add_definitions(-D_GLIBCXX_USE_CXX11_ABI=0)
+endif ()

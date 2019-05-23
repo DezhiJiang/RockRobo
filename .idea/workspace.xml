@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
+    <generated>
+      <config projectName="RockroboBridge" targetName="RockroboBridge" />
+      <config projectName="RockroboBridge" targetName="gtest" />
+      <config projectName="RockroboBridge" targetName="gmock" />
+      <config projectName="RockroboBridge" targetName="gmock_main" />
+      <config projectName="RockroboBridge" targetName="RockroboBridge_detect_changes" />
+      <config projectName="RockroboBridge" targetName="gtest_main" />
+    </generated>
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1ddd1d0c-802d-4f6f-9cfe-3f6ad4172e1d" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FavoritesManager">
+    <favorites_list name="RockroboBridge" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="map_builder_bridge.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/map_builder_bridge.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+              <folding>
+                <element signature="e#38#69#0" expanded="true" />
+                <element signature="e#253#312#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map_builder_interface.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/mapping/map_builder_interface.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="282">
+              <caret line="52" column="42" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LiteDriver.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/LiteDriver.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="775">
+              <caret line="143" column="39" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
+              <folding>
+                <element signature="e#37#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sensor_bridge.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sensor_bridge.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="181">
+              <caret line="230" column="43" selection-start-line="230" selection-start-column="43" selection-end-line="230" selection-end-column="43" />
+              <folding>
+                <element signature="e#38#64#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sensor_bridge.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/sensor_bridge.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="656">
+              <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/start.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map_builder_bridge.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/map_builder_bridge.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="57" selection-start-line="57" selection-end-line="57" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="start.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/start.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="415">
+              <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="driver.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../LiteDriver/toolchain/player/arm/include/player-3.1/libplayercore/driver.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="7733">
+              <caret line="407" column="18" selection-start-line="407" selection-start-column="18" selection-end-line="407" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>SerializeState</find>
+      <find>std::out_of_range</find>
+      <find>ProcessMessages</find>
+      <find>::at</find>
+      <find>.at</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/node_option.h" />
+        <option value="$PROJECT_DIR$/start_option.h" />
+        <option value="$PROJECT_DIR$/TfBridge.h" />
+        <option value="$PROJECT_DIR$/start_constants.h" />
+        <option value="$PROJECT_DIR$/../google_carto_ws/install_isolated/share/cartographer/cmake/functions.cmake" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/AllFiles.cmake" />
+        <option value="$PROJECT_DIR$/trajectory_option.h" />
+        <option value="$PROJECT_DIR$/time_conversion.cpp" />
+        <option value="$PROJECT_DIR$/time_conversion.h" />
+        <option value="$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/common/mutex.h" />
+        <option value="$PROJECT_DIR$/start_options.h" />
+        <option value="$PROJECT_DIR$/start_options.cpp" />
+        <option value="$PROJECT_DIR$/map_builder_bridge.cpp" />
+        <option value="$PROJECT_DIR$/start.h" />
+        <option value="$PROJECT_DIR$/map_builder_bridge.h" />
+        <option value="$PROJECT_DIR$/LiteDriver.h" />
+        <option value="$PROJECT_DIR$/trajectory_options.cpp" />
+        <option value="$PROJECT_DIR$/start.cpp" />
+        <option value="$PROJECT_DIR$/sensor_bridge.h" />
+        <option value="$PROJECT_DIR$/LiteDriver.cpp" />
+        <option value="$PROJECT_DIR$/sensor_bridge.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/sensor_bridge.h" />
+        <option value="$PROJECT_DIR$/src/sensor_bridge.cpp" />
+        <option value="$PROJECT_DIR$/src/LiteDriver.h" />
+        <option value="$PROJECT_DIR$/src/map_builder_bridge.h" />
+        <option value="$PROJECT_DIR$/src/start.h" />
+        <option value="$PROJECT_DIR$/src/map_builder_bridge.cpp" />
+        <option value="$PROJECT_DIR$/src/start.cpp" />
+        <option value="$PROJECT_DIR$/src/LiteDriver.cpp" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="65" />
+    <option name="y" value="-4" />
+    <option name="width" value="1855" />
+    <option name="height" value="1084" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="RockroboBridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RockroboBridge" type="47feb1d3:ProjectViewModuleNode" />
+            </path>
+            <path>
+              <item name="RockroboBridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RockroboBridge" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="RockroboBridge" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RockroboBridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RockroboBridge" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="RockroboBridge" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RockroboBridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RockroboBridge" type="47feb1d3:ProjectViewModuleNode" />
+              <item name="RockroboBridge" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RockroboBridge" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="LASER_&#9;null&#9;null&#10;Load&#9;null&#9;null&#10;now&#9;null&#9;null&#10;traje&#9;FILE&#9;file:///home/lzy/RockroboBridge/trajectory_options.cpp&#10;trajectory_options&#9;null&#9;null&#10;trajectory&#9;null&#9;null&#10;trajec&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../google_carto_ws/src/cartographer/CMakeLists.txt" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Build All">
+    <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="RockroboBridge" CONFIG_NAME="Debug" />
+    <configuration name="RockroboBridge" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="RockroboBridge" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="RockroboBridge" RUN_TARGET_NAME="RockroboBridge" />
+    <configuration name="RockroboBridge_detect_changes" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="RockroboBridge_detect_changes" CONFIG_NAME="Debug" />
+    <configuration name="gmock" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="gmock" CONFIG_NAME="Debug" />
+    <configuration name="gmock_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="gmock_main" CONFIG_NAME="Debug" />
+    <configuration name="gtest" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="gtest" CONFIG_NAME="Debug" />
+    <configuration name="gtest_main" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="RockroboBridge" TARGET_NAME="gtest_main" CONFIG_NAME="Debug" />
+    <list>
+      <item itemvalue="Application.Build All" />
+      <item itemvalue="Application.RockroboBridge" />
+      <item itemvalue="Application.RockroboBridge_detect_changes" />
+      <item itemvalue="Application.gmock" />
+      <item itemvalue="Application.gmock_main" />
+      <item itemvalue="Application.gtest" />
+      <item itemvalue="Application.gtest_main" />
+    </list>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1ddd1d0c-802d-4f6f-9cfe-3f6ad4172e1d" name="Default" comment="" />
+      <created>1525664061309</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1525664061309</updated>
+      <workItem from="1525664063933" duration="15355000" />
+      <workItem from="1525744557898" duration="43126000" />
+      <workItem from="1526028960484" duration="1294000" />
+      <workItem from="1526049516680" duration="605000" />
+      <workItem from="1526191743250" duration="847000" />
+      <workItem from="1526269014110" duration="11564000" />
+      <workItem from="1526303149218" duration="28814000" />
+      <workItem from="1526457083674" duration="47424000" />
+      <workItem from="1526736493692" duration="13565000" />
+      <workItem from="1526873911660" duration="21310000" />
+      <workItem from="1526997783730" duration="12629000" />
+      <workItem from="1527084408751" duration="396000" />
+      <workItem from="1527122461760" duration="29166000" />
+      <workItem from="1527471016366" duration="17786000" />
+      <workItem from="1527556982326" duration="27485000" />
+      <workItem from="1527651188136" duration="14505000" />
+      <workItem from="1527812917690" duration="2750000" />
+      <workItem from="1527942468078" duration="1378000" />
+      <workItem from="1528012249866" duration="8506000" />
+      <workItem from="1528852307384" duration="84000" />
+      <workItem from="1528852518209" duration="34000" />
+      <workItem from="1530585963123" duration="1988000" />
+      <workItem from="1536824687218" duration="2173000" />
+      <workItem from="1537172674853" duration="607000" />
+      <workItem from="1537355196390" duration="609000" />
+      <workItem from="1539742500331" duration="2009000" />
+      <workItem from="1540171869334" duration="598000" />
+      <workItem from="1540217909466" duration="5000" />
+      <workItem from="1540257518939" duration="103000" />
+      <workItem from="1540304782707" duration="599000" />
+      <workItem from="1540433675032" duration="14704000" />
+      <workItem from="1540776189000" duration="9303000" />
+      <workItem from="1540948568359" duration="14479000" />
+      <workItem from="1541122830789" duration="3274000" />
+      <workItem from="1541466884454" duration="42365000" />
+      <workItem from="1541685446195" duration="3000" />
+      <workItem from="1541728277103" duration="5768000" />
+      <workItem from="1541746012902" duration="8432000" />
+      <workItem from="1541984949387" duration="28083000" />
+      <workItem from="1542248238064" duration="2599000" />
+      <workItem from="1542589776220" duration="1804000" />
+      <workItem from="1542676653798" duration="21448000" />
+      <workItem from="1543195126707" duration="10091000" />
+      <workItem from="1543390830022" duration="6666000" />
+      <workItem from="1543480919314" duration="3748000" />
+      <workItem from="1543801634491" duration="1302000" />
+      <workItem from="1543804287575" duration="1467000" />
+      <workItem from="1543819670660" duration="10613000" />
+      <workItem from="1543973587479" duration="3955000" />
+      <workItem from="1544089509471" duration="521000" />
+      <workItem from="1544146525194" duration="3441000" />
+      <workItem from="1544165434048" duration="3801000" />
+      <workItem from="1544404017735" duration="6331000" />
+      <workItem from="1544442069320" duration="24114000" />
+      <workItem from="1545008948440" duration="26059000" />
+      <workItem from="1545615581471" duration="12398000" />
+      <workItem from="1546393579794" duration="44504000" />
+      <workItem from="1547090553635" duration="7265000" />
+      <workItem from="1547173712899" duration="3767000" />
+      <workItem from="1547429193397" duration="16480000" />
+      <workItem from="1548380405582" duration="5846000" />
+      <workItem from="1550633804908" duration="3295000" />
+      <workItem from="1555037410598" duration="502000" />
+      <workItem from="1556095559980" duration="263000" />
+      <workItem from="1556095932550" duration="1609000" />
+      <workItem from="1557308377433" duration="3472000" />
+      <workItem from="1557367648802" duration="12801000" />
+      <workItem from="1557465252316" duration="6392000" />
+      <workItem from="1557560351290" duration="6718000" />
+      <workItem from="1557821109194" duration="11777000" />
+      <workItem from="1557986377483" duration="8943000" />
+      <workItem from="1558060133237" duration="6814000" />
+      <workItem from="1558322346793" duration="7056000" />
+      <workItem from="1558405279168" duration="9855000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="731442000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="64" y="-11" width="1857" height="1092" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.43769634" visible="true" weight="0.22980349" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49945414" weight="0.32984293" />
+      <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4989083" weight="0.24915825" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010917" side_tool="true" weight="0.32879582" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info active="true" id="Structure" order="1" sideWeight="0.56230366" side_tool="true" visible="true" weight="0.22980349" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.32984293" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295082" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.33821988" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32879582" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="CMake" order="11" sideWeight="0.4989083" weight="0.24915825" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4390625" visible="true" weight="0.22980349" />
+      <window_info id="Structure" order="1" sideWeight="0.5609375" side_tool="true" visible="true" weight="0.22980349" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49945414" weight="0.32984293" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="8" visible="true" weight="0.32984293" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5010917" side_tool="true" weight="0.32879582" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.32879582" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.33821988" />
+      <window_info id="Favorites" order="2" side_tool="true" weight="0.3295082" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="8" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/map_builder_bridge.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1577">
+          <caret line="83" column="22" selection-start-line="83" selection-start-column="22" selection-end-line="83" selection-end-column="22" />
+          <folding>
+            <element signature="e#38#69#0" expanded="true" />
+            <element signature="e#253#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/unique_ptr.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="204" column="6" selection-start-line="204" selection-start-column="6" selection-end-line="204" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/common/make_unique.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="45" column="39" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/common/lua_parameter_dictionary.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="950">
+          <caret line="50" column="67" selection-start-line="50" selection-start-column="67" selection-end-line="50" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/common/configuration_file_resolver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/mapping/pose_extrapolator.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/mapping/map_builder.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-402">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/basic_string.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="453" column="6" selection-start-line="453" selection-start-column="6" selection-end-line="453" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/map_builder_bridge.h" />
+    <entry file="file://$PROJECT_DIR$/utility.h" />
+    <entry file="file://$PROJECT_DIR$/start_constants.h" />
+    <entry file="file://$PROJECT_DIR$/SensorData.h" />
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/common/time.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="706">
+          <caret line="56" column="6" selection-start-line="56" selection-start-column="6" selection-end-line="56" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LiteDriver.h" />
+    <entry file="file://$PROJECT_DIR$/start.h" />
+    <entry file="file://$PROJECT_DIR$/trajectory_option.h" />
+    <entry file="file://$PROJECT_DIR$/time_conversion.h" />
+    <entry file="file://$PROJECT_DIR$/time_conversion.cpp" />
+    <entry file="file://$PROJECT_DIR$/start_options.cpp" />
+    <entry file="file://$PROJECT_DIR$/start_options.h" />
+    <entry file="file://$PROJECT_DIR$/start.cpp" />
+    <entry file="file://$PROJECT_DIR$/sensor_bridge.h" />
+    <entry file="file:///usr/include/eigen3/Eigen/src/Core/Matrix.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="450" column="54" selection-start-line="450" selection-start-column="54" selection-end-line="450" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/trajectory_options.cpp" />
+    <entry file="file://$PROJECT_DIR$/map_builder_bridge.cpp" />
+    <entry file="file://$PROJECT_DIR$/LiteDriver.cpp" />
+    <entry file="file://$PROJECT_DIR$/sensor_bridge.cpp" />
+    <entry file="file:///usr/include/eigen3/Eigen/src/Core/MatrixBase.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="266" column="54" selection-start-line="266" selection-start-column="54" selection-end-line="266" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/sensor/imu_data.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="301">
+          <caret line="26" column="7" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/transform/rigid_transform.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret line="186" column="19" selection-start-line="186" selection-start-column="19" selection-end-line="186" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/sensor/odometry_data.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/time.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="123" column="3" selection-start-line="123" selection-start-column="3" selection-end-line="123" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="37" column="19" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LiteDriver/toolchain/player/arm/include/player-3.1/libplayerinterface/player.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2698">
+          <caret line="142" column="46" selection-start-line="142" selection-start-column="46" selection-end-line="142" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LiteDriver/toolchain/player/arm/include/player-3.1/libplayercore/configfile.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3705">
+          <caret line="195" column="24" selection-start-line="195" selection-start-column="24" selection-end-line="195" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/x86_64-linux-gnu/sys/poll.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../car_cc/include/glog/logging.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10640">
+          <caret line="560" column="8" selection-start-line="560" selection-start-column="8" selection-end-line="560" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start_options.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start_options.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="19" column="16" selection-start-line="19" selection-start-column="16" selection-end-line="21" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/trajectory_option.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="29" column="42" selection-start-line="29" selection-start-column="42" selection-end-line="29" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../LiteDriver/toolchain/player/arm/include/player-3.1/libplayercore/driver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7733">
+          <caret line="407" column="18" selection-start-line="407" selection-start-column="18" selection-end-line="407" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///usr/include/c++/5/bits/stl_map.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="844" column="9" selection-start-line="844" selection-start-column="9" selection-end-line="844" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="43" column="12" selection-start-line="43" selection-start-column="12" selection-end-line="43" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensor_bridge.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="181">
+          <caret line="230" column="43" selection-start-line="230" selection-start-column="43" selection-end-line="230" selection-end-column="43" />
+          <folding>
+            <element signature="e#38#64#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sensor_bridge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="656">
+          <caret line="61" column="58" selection-start-line="61" selection-start-column="58" selection-end-line="61" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map_builder_bridge.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="57" selection-start-line="57" selection-end-line="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../google_carto_ws/src/cartographer/cartographer/mapping/map_builder_interface.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="15" selection-end-line="52" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LiteDriver.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="551">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding>
+            <element signature="e#278#296#0" expanded="true" />
+            <element signature="e#385#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/start.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="415">
+          <caret line="182" column="42" selection-start-line="182" selection-start-column="42" selection-end-line="182" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/map_builder_bridge.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="28" column="26" selection-start-line="28" selection-start-column="26" selection-end-line="28" selection-end-column="26" />
+          <folding>
+            <element signature="e#38#69#0" expanded="true" />
+            <element signature="e#253#312#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LiteDriver.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="775">
+          <caret line="143" column="39" selection-start-line="143" selection-start-column="39" selection-end-line="143" selection-end-column="39" />
+          <folding>
+            <element signature="e#37#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

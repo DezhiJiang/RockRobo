@@ -1,0 +1,240 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+AddExtrapolator	start.cpp	/^    void Start::AddExtrapolator(int trajectory_id, const RockRobo::TrajectoryOptions &options) {$/;"	f	class:RockRobo::Start
+AddInterface	LiteDriver.cpp	/^bool LiteDriver::AddInterface(player_devaddr_t& addr,$/;"	f	class:LiteDriver
+AddSensorSamples	start.cpp	/^    void Start::AddSensorSamples(int trajectory_id,$/;"	f	class:RockRobo::Start
+AddTrajectory	map_builder_bridge.cpp	/^    int MapBuilderBridge::AddTrajectory($/;"	f	class:RockRobo::MapBuilderBridge
+AddTrajectory	start.cpp	/^    int Start::AddTrajectory(const RockRobo::TrajectoryOptions &options,$/;"	f	class:RockRobo::Start
+BACKLOG	LiteDriver.cpp	/^    constexpr int BACKLOG = 1;  \/\/constexpr编译期$/;"	m	namespace:__anon1	file:
+BumperSet	LiteDriver.cpp	/^void LiteDriver::BumperSet() {$/;"	f	class:LiteDriver
+COMPOSITE_LONG	SensorData.h	/^    COMPOSITE_LONG                                     = 6,$/;"	e	enum:__anon3
+CheckTrajectoryOptions	trajectory_options.cpp	/^        void CheckTrajectoryOptions(const TrajectoryOptions& options){$/;"	f	namespace:RockRobo::__anon5
+ComputeExpectedSensorIds	start.cpp	/^    Start::ComputeExpectedSensorIds(const RockRobo::TrajectoryOptions &options,$/;"	f	class:RockRobo::Start
+ComputerepeatedTopicNames	start_constants.h	/^    std::vector<std::string> ComputerepeatedTopicNames(const std::string& topic, int num_topics){$/;"	f	namespace:RockRobo
+CreateInitialTrajectoryPose	trajectory_options.cpp	/^    CreateInitialTrajectoryPose($/;"	f	namespace:RockRobo
+CreateStartOptions	start_options.cpp	/^    StartOptions CreateStartOptions($/;"	f	namespace:RockRobo
+CreateTrajectoryOptions	trajectory_options.cpp	/^    TrajectoryOptions CreateTrajectoryOptions($/;"	f	namespace:RockRobo
+DOCK_BACK_LONG	SensorData.h	/^    DOCK_BACK_LONG                                     = 4,$/;"	e	enum:__anon3
+DOCK_BACK_SHORT	SensorData.h	/^    DOCK_BACK_SHORT                                    = 3,$/;"	e	enum:__anon3
+DefaultSensorTopics	start.cpp	/^        std::map<std::string, std::string> DefaultSensorTopics(){$/;"	f	namespace:RockRobo::__anon4
+FIRST_TIME	LiteDriver.cpp	/^    constexpr int FIRST_TIME = 10;$/;"	m	namespace:__anon1	file:
+FinishAllTrajectory	start.cpp	/^    void Start::FinishAllTrajectory() {$/;"	f	class:RockRobo::Start
+FinishTrajectory	map_builder_bridge.cpp	/^    void MapBuilderBridge::FinishTrajectory(const int trajectory_id) {$/;"	f	class:RockRobo::MapBuilderBridge
+FinishTrajectoryUnderLock	start.cpp	/^    bool Start::FinishTrajectoryUnderLock(int trajectory_id) {$/;"	f	class:RockRobo::Start
+FromDouble	time_conversion.cpp	/^    ::cartographer::common::Time FromDouble(double time){$/;"	f	namespace:RockRobo
+GetTrajectoryStates	map_builder_bridge.cpp	/^            MapBuilderBridge::GetTrajectoryStates() {$/;"	f	class:RockRobo::MapBuilderBridge
+HandleImuAndOdometryMessage	sensor_bridge.cpp	/^    void SensorBridge::HandleImuAndOdometryMessage(const std::string& sensor_id_imu,$/;"	f	class:RockRobo::SensorBridge
+HandleImuAndOdometryMessage	start.cpp	/^    void Start::HandleImuAndOdometryMessage(int trajectory_id, const std::string &sensor_id_imu,$/;"	f	class:RockRobo::Start
+HandleLaserScan	sensor_bridge.cpp	/^    void SensorBridge::HandleLaserScan(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
+HandleLaserScanMessage	sensor_bridge.cpp	/^    void SensorBridge::HandleLaserScanMessage(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
+HandleLaserScanMessage	start.cpp	/^    void Start::HandleLaserScanMessage(int trajectory_id, const std::string &sensor_id,$/;"	f	class:RockRobo::Start
+HandleMultiEchoLaserScanMessage	sensor_bridge.cpp	/^    void SensorBridge::HandleMultiEchoLaserScanMessage(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
+HandleMultiEchoScanMessage	start.cpp	/^    void Start::HandleMultiEchoScanMessage(int trajectory_id, const std::string &sensor_id,$/;"	f	class:RockRobo::Start
+HandleOdometryMessage	sensor_bridge.cpp	/^    void SensorBridge::HandleOdometryMessage(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
+HandleOdometryMessage	start.cpp	/^    void Start::HandleOdometryMessage(int trajectory_id, const std::string &sensor_id,$/;"	f	class:RockRobo::Start
+HandleRangefinder	sensor_bridge.cpp	/^    void SensorBridge::HandleRangefinder(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
+InitTimer	LiteDriver.cpp	/^void LiteDriver::InitTimer(struct pollfd *fds){$/;"	f	class:LiteDriver
+KEY_INVALID	SensorData.h	/^    KEY_INVALID                                        = 0xff,$/;"	e	enum:__anon3
+KEY_NONE	SensorData.h	/^    KEY_NONE                                           = 0,$/;"	e	enum:__anon3
+KEY_RPT_DOWN	SensorData.h	/^    KEY_RPT_DOWN                                       = 8,$/;"	e	enum:__anon3
+KEY_RPT_HOME_LONG_10	SensorData.h	/^    KEY_RPT_HOME_LONG_10                               = 14,$/;"	e	enum:__anon3
+KEY_RPT_SPOT_LONG	SensorData.h	/^    KEY_RPT_SPOT_LONG                                  = 12,$/;"	e	enum:__anon3
+KEY_RPT_SPOT_SHORT	SensorData.h	/^    KEY_RPT_SPOT_SHORT                                 = 11,$/;"	e	enum:__anon3
+KEY_VALUE	SensorData.h	/^} KEY_VALUE;$/;"	t	typeref:enum:__anon3
+LASER_START	LiteDriver.cpp	/^    int LASER_START = 0;$/;"	m	namespace:__anon1	file:
+LDS_FLAG_COVER_FILTER	SensorData.h	/^static const uint16_t LDS_FLAG_COVER_FILTER = 0x2000;$/;"	v
+LDS_FLAG_DATA_INVALID	SensorData.h	/^static const uint16_t LDS_FLAG_DATA_INVALID = 0x8000;$/;"	v
+LDS_FLAG_SPEED_WARNING	SensorData.h	/^static const uint16_t LDS_FLAG_SPEED_WARNING = 0x1000;$/;"	v
+LDS_STRENGTH_WARNING	SensorData.h	/^static const uint16_t LDS_STRENGTH_WARNING = 0x4000;$/;"	v
+LITEDRIVER_LITEDRIVER_H	LiteDriver.h	6;"	d
+LITEDRIVER_SENSORDATA_H	SensorData.h	6;"	d
+LITEDRIVER_UTILITY_H	utility.h	6;"	d
+Laser_Intensity_Mask	SensorData.h	25;"	d
+Laser_Intensity_Mask	sensor_bridge.cpp	/^    constexpr int Laser_Intensity_Mask = 0xFFF;$/;"	m	namespace:RockRobo	file:
+Laser_Invalid_Mask	sensor_bridge.cpp	/^    constexpr int Laser_Invalid_Mask = 0xF000;$/;"	m	namespace:RockRobo	file:
+LiteDriver	LiteDriver.cpp	/^LiteDriver::LiteDriver(ConfigFile* cf, int section):$/;"	f	class:LiteDriver
+LiteDriver	LiteDriver.h	/^class LiteDriver : public ThreadedDriver {$/;"	c
+Litelog	utility.h	14;"	d
+Litelog	utility.h	20;"	d
+LoadOptions	start_options.cpp	/^    std::tuple<StartOptions, TrajectoryOptions> LoadOptions($/;"	f	namespace:RockRobo
+LoadOptions	start_options.cpp	/^    void LoadOptions($/;"	f	namespace:RockRobo
+LocalSlamData	map_builder_bridge.h	/^           struct LocalSlamData{$/;"	s	struct:RockRobo::MapBuilderBridge::TrajectoryState
+MAXDATASIZE	LiteDriver.cpp	/^    constexpr int MAXDATASIZE = 10;$/;"	m	namespace:__anon1	file:
+Main	LiteDriver.cpp	/^void LiteDriver::Main(){$/;"	f	class:LiteDriver
+MainQuit	LiteDriver.cpp	/^void LiteDriver::MainQuit(){$/;"	f	class:LiteDriver
+MainSetup	LiteDriver.cpp	/^int LiteDriver::MainSetup(){$/;"	f	class:LiteDriver
+MapBuilderBridge	map_builder_bridge.cpp	/^    MapBuilderBridge::MapBuilderBridge(const RockRobo::StartOptions &start_options,$/;"	f	class:RockRobo::MapBuilderBridge
+MapBuilderBridge	map_builder_bridge.h	/^   class MapBuilderBridge{$/;"	c	namespace:RockRobo
+OnLocalSlamResult	map_builder_bridge.cpp	/^    void MapBuilderBridge::OnLocalSlamResult(const int trajectory_id, const ::cartographer::common::Time time,$/;"	f	class:RockRobo::MapBuilderBridge
+PORT	LiteDriver.cpp	/^    constexpr int PORT = 1234;$/;"	m	namespace:__anon1	file:
+ProcessBumperData	LiteDriver.cpp	/^void LiteDriver::ProcessBumperData(double time_p, void* pData){$/;"	f	class:LiteDriver
+ProcessFun	LiteDriver.h	/^    typedef void (LiteDriver::*ProcessFun)(double, void*);$/;"	t	class:LiteDriver
+ProcessGyroAndOdoData	LiteDriver.cpp	/^void LiteDriver::ProcessGyroAndOdoData(double time, void* pData){$/;"	f	class:LiteDriver
+ProcessKeyData	LiteDriver.cpp	/^void LiteDriver::ProcessKeyData(double time, void* pData){$/;"	f	class:LiteDriver
+ProcessLaserData	LiteDriver.cpp	/^void LiteDriver::ProcessLaserData(double time, void* pData){$/;"	f	class:LiteDriver
+ProcessMessage	LiteDriver.cpp	/^int LiteDriver::ProcessMessage(QueuePointer &resp_queue, player_msghdr * hdr, void * data){$/;"	f	class:LiteDriver
+ProcessNewOdoData	LiteDriver.cpp	/^void LiteDriver::ProcessNewOdoData(double time, void* pData){$/;"	f	class:LiteDriver
+PublishTrajectoeyStates	start.cpp	/^    void Start::PublishTrajectoeyStates() {$/;"	f	class:RockRobo::Start
+ROCKROBOBRIDGE_MAP_BUILDER_BRIDGE_H	map_builder_bridge.h	6;"	d
+ROCKROBOBRIDGE_NODE_OPTION_H	start_options.h	6;"	d
+ROCKROBOBRIDGE_SENSOR_BRIDGE_H	sensor_bridge.h	6;"	d
+ROCKROBOBRIDGE_START_CONSTANTS_H	start_constants.h	6;"	d
+ROCKROBOBRIDGE_START_H	start.h	6;"	d
+ROCKROBOBRIDGE_TIME_CONVERSION_H	time_conversion.h	6;"	d
+ROCKROBOBRIDGE_TRAJECTORY_OPTION_H	trajectory_option.h	6;"	d
+RegisterProcessFun	LiteDriver.cpp	/^bool LiteDriver::RegisterProcessFun(int type,$/;"	f	class:LiteDriver
+RockRobo	map_builder_bridge.cpp	/^namespace RockRobo{$/;"	n	file:
+RockRobo	map_builder_bridge.h	/^namespace RockRobo{$/;"	n
+RockRobo	sensor_bridge.cpp	/^namespace RockRobo{$/;"	n	file:
+RockRobo	sensor_bridge.h	/^namespace RockRobo{$/;"	n
+RockRobo	start.cpp	/^namespace RockRobo{$/;"	n	file:
+RockRobo	start.h	/^namespace RockRobo{$/;"	n
+RockRobo	start_constants.h	/^namespace RockRobo{$/;"	n
+RockRobo	start_options.cpp	/^namespace RockRobo {$/;"	n	file:
+RockRobo	start_options.h	/^namespace RockRobo{$/;"	n
+RockRobo	time_conversion.cpp	/^namespace RockRobo{$/;"	n	file:
+RockRobo	time_conversion.h	/^namespace RockRobo{$/;"	n
+RockRobo	trajectory_option.h	/^namespace RockRobo{$/;"	n
+RockRobo	trajectory_options.cpp	/^namespace RockRobo {$/;"	n	file:
+RunFinalOptimization	map_builder_bridge.cpp	/^    void MapBuilderBridge::RunFinalOptimization() {$/;"	f	class:RockRobo::MapBuilderBridge
+RunFinalOptimization	start.cpp	/^    void Start::RunFinalOptimization() {$/;"	f	class:RockRobo::Start
+START_STOP_LONG	SensorData.h	/^    START_STOP_LONG                                    = 2,$/;"	e	enum:__anon3
+START_STOP_SHORT	SensorData.h	/^    START_STOP_SHORT                                   = 1,$/;"	e	enum:__anon3
+STRAIGHT	LiteDriver.cpp	/^        STRAIGHT$/;"	e	enum:__anon1::__anon2	file:
+SendSpeedCMD	LiteDriver.cpp	/^void LiteDriver::SendSpeedCMD(double lineSpeed, double yawSpeed, bool force){$/;"	f	class:LiteDriver
+SensorBridge	sensor_bridge.cpp	/^    SensorBridge::SensorBridge($/;"	f	class:RockRobo::SensorBridge
+SensorBridge	sensor_bridge.h	/^    class SensorBridge{$/;"	c	namespace:RockRobo
+SerializeState	map_builder_bridge.cpp	/^    bool MapBuilderBridge::SerializeState(const std::string &filename) {$/;"	f	class:RockRobo::MapBuilderBridge
+SerializeState	start.cpp	/^    void Start::SerializeState(const std::string &filename) {$/;"	f	class:RockRobo::Start
+SetOnceTimer	LiteDriver.cpp	/^void LiteDriver::SetOnceTimer(struct pollfd *fds, int first_time){$/;"	f	class:LiteDriver
+SetSpeed	LiteDriver.cpp	/^void LiteDriver::SetSpeed(double lineSpeed, double yawSpeed, bool force){$/;"	f	class:LiteDriver
+SetTimer	LiteDriver.cpp	/^void LiteDriver::SetTimer(struct pollfd *fds){$/;"	f	class:LiteDriver
+Start	start.cpp	/^    Start::Start(const RockRobo::StartOptions &start_options,$/;"	f	class:RockRobo::Start
+Start	start.h	/^    class Start{$/;"	c	namespace:RockRobo
+StartOptions	start_options.h	/^    struct StartOptions{$/;"	s	namespace:RockRobo
+StartTrajectoryWithDefaultTopics	start.cpp	/^    void Start::StartTrajectoryWithDefaultTopics(const RockRobo::TrajectoryOptions &options) {$/;"	f	class:RockRobo::Start
+SubscribeDevice	LiteDriver.cpp	/^bool LiteDriver::SubscribeDevice(player_devaddr_t& addr,$/;"	f	class:LiteDriver
+TRI_TIME	LiteDriver.cpp	/^    int TRI_TIME = 20;$/;"	m	namespace:__anon1	file:
+TURN	LiteDriver.cpp	/^        TURN,$/;"	e	enum:__anon1::__anon2	file:
+Time_Increment	sensor_bridge.cpp	/^    constexpr float Time_Increment = 0.0;   \/\/FIXME::现在将其固定为0.0$/;"	m	namespace:RockRobo	file:
+ToImuData	sensor_bridge.cpp	/^    std::unique_ptr<::cartographer::sensor::ImuData> SensorBridge::ToImuData(double time, void *pData){$/;"	f	class:RockRobo::SensorBridge
+ToOdometryData	sensor_bridge.cpp	/^    std::unique_ptr<::cartographer::sensor::OdometryData> SensorBridge::ToOdometryData(double time, void *pData){$/;"	f	class:RockRobo::SensorBridge
+ToPointCloudWithIntensities	sensor_bridge.cpp	/^            ::cartographer::common::Time> SensorBridge::ToPointCloudWithIntensities(double time, void *pData){$/;"	f	class:RockRobo::SensorBridge
+TrajectoryOptions	trajectory_option.h	/^    struct TrajectoryOptions {$/;"	s	namespace:RockRobo
+TrajectorySensorSamplers	start.h	/^            TrajectorySensorSamplers(const double rangefinder_sampling_ratio,$/;"	f	struct:RockRobo::Start::TrajectorySensorSamplers
+TrajectorySensorSamplers	start.h	/^        struct TrajectorySensorSamplers{$/;"	s	class:RockRobo::Start
+TrajectoryState	map_builder_bridge.h	/^       struct TrajectoryState{$/;"	s	class:RockRobo::MapBuilderBridge
+UpdateSpeed	LiteDriver.cpp	/^void LiteDriver::UpdateSpeed(){$/;"	f	class:LiteDriver
+UpdateSpeedThread	LiteDriver.cpp	/^void* UpdateSpeedThread(void* obj){$/;"	f
+ValidateTrajectoryOptions	start.cpp	/^    bool Start::ValidateTrajectoryOptions(const RockRobo::TrajectoryOptions &options) {$/;"	f	class:RockRobo::Start
+WHEEL_SPEED_UPDATE_INTERVAL	SensorData.h	24;"	d
+configuration_basename	LiteDriver.cpp	/^    const std::string configuration_basename = "backpack_2d.lua";$/;"	m	namespace:__anon1	file:
+configuration_directory	LiteDriver.cpp	/^    const std::string configuration_directory = "configuration_files";$/;"	m	namespace:__anon1	file:
+connectfd	LiteDriver.h	/^    int connectfd;$/;"	m	class:LiteDriver
+ecef_to_local_frame_	sensor_bridge.h	/^        ::cartographer::common::optional<::cartographer::transform::Rigid3d> ecef_to_local_frame_;$/;"	m	class:RockRobo::SensorBridge
+extrapolators_	start.h	/^        std::map<int, ::cartographer::mapping::PoseExtrapolator> extrapolators_;$/;"	m	class:RockRobo::Start
+fds	LiteDriver.cpp	/^    struct pollfd fds[3];$/;"	m	namespace:__anon1	typeref:struct:__anon1::pollfd	file:
+fixed_frame_pose_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler fixed_frame_pose_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
+fixed_frame_pose_sampling_ratio	trajectory_option.h	/^        double fixed_frame_pose_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+g_imu_odom_data	sensor_bridge.cpp	/^    player_position3d_data_t g_imu_odom_data;$/;"	m	namespace:RockRobo	file:
+g_imu_odom_time	sensor_bridge.cpp	/^    double g_imu_odom_time = 0;$/;"	m	namespace:RockRobo	file:
+g_skip	LiteDriver.cpp	/^    bool g_skip = false;$/;"	m	namespace:__anon1	file:
+g_stop_odo	LiteDriver.cpp	/^    bool g_stop_odo = false;$/;"	m	namespace:__anon1	file:
+imu_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler imu_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
+imu_sampling_ratio	trajectory_option.h	/^        double imu_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+kConstraintListTopic	start_constants.h	/^    constexpr char kConstraintListTopic[] = "constraint_list";$/;"	m	namespace:RockRobo
+kFdNum	LiteDriver.cpp	/^    constexpr int kFdNum = 3;$/;"	m	namespace:__anon1	file:
+kFinishTrajectoryServiceName	start_constants.h	/^    constexpr char kFinishTrajectoryServiceName[] = "finish_trajectory";$/;"	m	namespace:RockRobo
+kFirstBumperTime	LiteDriver.cpp	/^    constexpr int kFirstBumperTime = 9;$/;"	m	namespace:__anon1	file:
+kImuTopic	start_constants.h	/^    constexpr char kImuTopic[] = "imu";$/;"	m	namespace:RockRobo
+kLandmarkPoseListTopic	start_constants.h	/^    constexpr char kLandmarkPoseListTopic[] = "landmark_poses_list";$/;"	m	namespace:RockRobo
+kLandmarkTopic	start_constants.h	/^    constexpr char kLandmarkTopic[] = "landmark";$/;"	m	namespace:RockRobo
+kLaserScanTopic	start_constants.h	/^    constexpr char kLaserScanTopic[] = "scan";$/;"	m	namespace:RockRobo
+kMultiEchoLaserScanTopic	start_constants.h	/^    constexpr char kMultiEchoLaserScanTopic[] = "echoes";$/;"	m	namespace:RockRobo
+kNavSatFixTopic	start_constants.h	/^    constexpr char kNavSatFixTopic[] = "fix";$/;"	m	namespace:RockRobo
+kOccupancyGridTopic	start_constants.h	/^    constexpr char kOccupancyGridTopic[] = "map";$/;"	m	namespace:RockRobo
+kOdometryTopic	start_constants.h	/^    constexpr char kOdometryTopic[] = "odom";$/;"	m	namespace:RockRobo
+kPointCloud2Topic	start_constants.h	/^    constexpr char kPointCloud2Topic[] = "points2";$/;"	m	namespace:RockRobo
+kRunTime	LiteDriver.cpp	/^    constexpr int kRunTime = 100000000;$/;"	m	namespace:__anon1	file:
+kScanMatchedPointCloudTopic	start_constants.h	/^    constexpr char kScanMatchedPointCloudTopic[] = "scan_matched_points2";$/;"	m	namespace:RockRobo
+kStartTrajectoryServiceName	start_constants.h	/^    constexpr char kStartTrajectoryServiceName[] = "start_trajectory";$/;"	m	namespace:RockRobo
+kSubmapListTopic	start_constants.h	/^    constexpr char kSubmapListTopic[] = "submap_list";$/;"	m	namespace:RockRobo
+kSubmapQueryServiceName	start_constants.h	/^    constexpr char kSubmapQueryServiceName[] = "submap_query";$/;"	m	namespace:RockRobo
+kTrajectoryNodeListTopic	start_constants.h	/^    constexpr char kTrajectoryNodeListTopic[] = "trajectory_node_list";$/;"	m	namespace:RockRobo
+kWriteStateServiceName	start_constants.h	/^    constexpr char kWriteStateServiceName[] = "write_state";$/;"	m	namespace:RockRobo
+landmark_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler landmark_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
+landmarks_sampling_ratio	trajectory_option.h	/^        double landmarks_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+listenfd	LiteDriver.h	/^    int listenfd;$/;"	m	class:LiteDriver
+local_pose	map_builder_bridge.h	/^               ::cartographer::transform::Rigid3d local_pose;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState::LocalSlamData
+local_slam_data	map_builder_bridge.h	/^           std::shared_ptr<const LocalSlamData> local_slam_data;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState
+local_to_map	map_builder_bridge.h	/^           cartographer::transform::Rigid3d local_to_map;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState
+lookup_transform_timeout_sec	start_options.h	/^        double lookup_transform_timeout_sec;$/;"	m	struct:RockRobo::StartOptions
+m_bumper_addr	LiteDriver.h	/^    player_devaddr_t m_bumper_addr;$/;"	m	class:LiteDriver
+m_controlAio_addr	LiteDriver.h	/^    player_devaddr_t m_controlAio_addr;$/;"	m	class:LiteDriver
+m_force	LiteDriver.h	/^    std::atomic<bool> m_force;        \/\/ force set, ignore cliff$/;"	m	class:LiteDriver
+m_gyro_odo_addr	LiteDriver.h	/^    player_devaddr_t m_gyro_odo_addr;$/;"	m	class:LiteDriver
+m_key_addr	LiteDriver.h	/^    player_devaddr_t m_key_addr;$/;"	m	class:LiteDriver
+m_laser_addr	LiteDriver.h	/^    player_devaddr_t m_laser_addr;$/;"	m	class:LiteDriver
+m_line_speed	LiteDriver.h	/^    std::atomic<double> m_line_speed;  \/\/ m\/s$/;"	m	class:LiteDriver
+m_new_odo_addr	LiteDriver.h	/^    player_devaddr_t m_new_odo_addr;$/;"	m	class:LiteDriver
+m_odo_addr	LiteDriver.h	/^    player_devaddr_t m_odo_addr;$/;"	m	class:LiteDriver
+m_pWheelDevice	LiteDriver.h	/^    Device* m_pWheelDevice;$/;"	m	class:LiteDriver
+m_register_table	LiteDriver.h	/^    std::map<std::pair<int, int>, std::vector<std::pair<player_devaddr_t, ProcessFun>>> m_register_table;$/;"	m	class:LiteDriver
+m_stop_driver	LiteDriver.h	/^    bool m_stop_driver;$/;"	m	class:LiteDriver
+m_update_speed_thread	LiteDriver.h	/^    pthread_t m_update_speed_thread;$/;"	m	class:LiteDriver
+m_yaw_speed	LiteDriver.h	/^    std::atomic<double> m_yaw_speed;   \/\/ rad$/;"	m	class:LiteDriver
+map_builder_	map_builder_bridge.h	/^       std::unique_ptr<cartographer::mapping::MapBuilderInterface> map_builder_;$/;"	m	class:RockRobo::MapBuilderBridge
+map_builder_options	start_options.h	/^        ::cartographer::mapping::proto::MapBuilderOptions map_builder_options;$/;"	m	struct:RockRobo::StartOptions
+map_frame	start_options.h	/^        std::string map_frame;$/;"	m	struct:RockRobo::StartOptions
+mutex_	map_builder_bridge.h	/^       cartographer::common::Mutex mutex_;$/;"	m	class:RockRobo::MapBuilderBridge
+mutex_	start.h	/^        cartographer::common::Mutex mutex_;$/;"	m	class:RockRobo::Start
+now	time_conversion.cpp	/^    ::cartographer::common::Time now(){$/;"	f	namespace:RockRobo
+num_laser_scans	trajectory_option.h	/^        int num_laser_scans;$/;"	m	struct:RockRobo::TrajectoryOptions
+num_multi_echo_laser_scans	trajectory_option.h	/^        int num_multi_echo_laser_scans;$/;"	m	struct:RockRobo::TrajectoryOptions
+num_point_clouds	trajectory_option.h	/^        int num_point_clouds;$/;"	m	struct:RockRobo::TrajectoryOptions
+num_subdivisions_per_laser_scan	trajectory_option.h	/^        int num_subdivisions_per_laser_scan;$/;"	m	struct:RockRobo::TrajectoryOptions
+num_subdivisions_per_laser_scan_	sensor_bridge.h	/^        const int num_subdivisions_per_laser_scan_;$/;"	m	class:RockRobo::SensorBridge
+odom_frame	trajectory_option.h	/^        std::string odom_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
+odometry_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler odometry_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
+odometry_sampling_ratio	trajectory_option.h	/^        double odometry_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+player_driver_init	LiteDriver.cpp	/^int player_driver_init(DriverTable *table) {$/;"	f
+pose_publish_period_sec	start_options.h	/^        double pose_publish_period_sec;$/;"	m	struct:RockRobo::StartOptions
+provide_odom_frame	trajectory_option.h	/^        bool provide_odom_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
+publish_frame_projected_to_2d	trajectory_option.h	/^        bool publish_frame_projected_to_2d;$/;"	m	struct:RockRobo::TrajectoryOptions
+published_frame	trajectory_option.h	/^        std::string published_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
+published_to_tracking	map_builder_bridge.h	/^           std::unique_ptr<cartographer::transform::Rigid3d> published_to_tracking;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState
+range_data_in_local	map_builder_bridge.h	/^               ::cartographer::sensor::RangeData range_data_in_local;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState::LocalSlamData
+rangefinder_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler rangefinder_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
+rangefinder_sampling_ratio	trajectory_option.h	/^        double rangefinder_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+save_state_filename	LiteDriver.cpp	/^    const std::string save_state_filename = "trajectory_state.pbstream";$/;"	m	namespace:__anon1	file:
+sensor_bridge	map_builder_bridge.cpp	/^    SensorBridge* MapBuilderBridge::sensor_bridge(const int trajectory_id){$/;"	f	class:RockRobo::MapBuilderBridge
+sensor_bridges_	map_builder_bridge.h	/^       std::unordered_map<int, std::unique_ptr<SensorBridge>> sensor_bridges_;$/;"	m	class:RockRobo::MapBuilderBridge
+sensor_id_imu	LiteDriver.cpp	/^    const std::string sensor_id_imu = "imu";$/;"	m	namespace:__anon1	file:
+sensor_id_laser	LiteDriver.cpp	/^    const std::string sensor_id_laser = "scan";$/;"	m	namespace:__anon1	file:
+sensor_id_multi_laser	LiteDriver.cpp	/^    const std::string sensor_id_multi_laser = "echoes";$/;"	m	namespace:__anon1	file:
+sensor_id_odo	LiteDriver.cpp	/^    const std::string sensor_id_odo = "odom";$/;"	m	namespace:__anon1	file:
+sensor_samplers_	start.h	/^        std::unordered_map<int, TrajectorySensorSamplers> sensor_samplers_;$/;"	m	class:RockRobo::Start
+sensor_to_previous_subdivision_time_	sensor_bridge.h	/^        std::map<std::string, cartographer::common::Time> sensor_to_previous_subdivision_time_;$/;"	m	class:RockRobo::SensorBridge
+start_options	LiteDriver.cpp	/^    StartOptions start_options;$/;"	m	namespace:__anon1	file:
+start_options_	map_builder_bridge.h	/^       const StartOptions start_options_;$/;"	m	class:RockRobo::MapBuilderBridge
+start_options_	start.h	/^        const StartOptions start_options_;$/;"	m	class:RockRobo::Start
+state_num	LiteDriver.cpp	/^    int state_num = 0;$/;"	m	namespace:__anon1	file:
+submap_publish_period_sec	start_options.h	/^        double submap_publish_period_sec;$/;"	m	struct:RockRobo::StartOptions
+time	map_builder_bridge.h	/^               ::cartographer::common::Time time;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState::LocalSlamData
+tracking_frame	trajectory_option.h	/^        std::string tracking_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
+trajectory_builder_	sensor_bridge.h	/^        ::cartographer::mapping::TrajectoryBuilderInterface* const trajectory_builder_;$/;"	m	class:RockRobo::SensorBridge::cartographer::mapping
+trajectory_builder_options	trajectory_option.h	/^            trajectory_builder_options;$/;"	m	struct:RockRobo::TrajectoryOptions
+trajectory_id	LiteDriver.cpp	/^    constexpr int trajectory_id = 0;$/;"	m	namespace:__anon1	file:
+trajectory_options	LiteDriver.cpp	/^    TrajectoryOptions trajectory_options;$/;"	m	namespace:__anon1	file:
+trajectory_options	map_builder_bridge.h	/^           TrajectoryOptions trajectory_options;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState
+trajectory_options_	map_builder_bridge.h	/^       std::unordered_map<int, TrajectoryOptions> trajectory_options_;$/;"	m	class:RockRobo::MapBuilderBridge
+trajectory_publish_period_sec	start_options.h	/^        double trajectory_publish_period_sec;$/;"	m	struct:RockRobo::StartOptions
+use_landmarks	trajectory_option.h	/^        bool use_landmarks;$/;"	m	struct:RockRobo::TrajectoryOptions
+use_nav_sat	trajectory_option.h	/^        bool use_nav_sat;$/;"	m	struct:RockRobo::TrajectoryOptions
+use_odometry	trajectory_option.h	/^        bool use_odometry;$/;"	m	struct:RockRobo::TrajectoryOptions
+~LiteDriver	LiteDriver.cpp	/^LiteDriver::~LiteDriver(){}$/;"	f	class:LiteDriver
+~Start	start.cpp	/^    Start::~Start() { FinishAllTrajectory(); }$/;"	f	class:RockRobo::Start
