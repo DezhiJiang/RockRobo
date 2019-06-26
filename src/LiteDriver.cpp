@@ -5,6 +5,7 @@
 #include "LiteDriver.h"
 #include "utility.h"
 #include "slam_types.h"
+#include "slam.h"
 #include <thread>
 
 #include <sys/poll.h>
@@ -144,7 +145,7 @@ int LiteDriver::MainSetup(){
 //        start->LoadState(save_state_filename,false);
 //    Litelog(LEVEL_INFO, "LoadState finish.\n");
 //    LOG(INFO)<<"LoadState finish.\n";
-//
+
 //    start->getNewTrajectoryID(save_state_filename);
 
 //    start->FinishAllTrajectory();
@@ -156,16 +157,43 @@ int LiteDriver::MainSetup(){
 //    LOG(INFO)<<"SerializeState finish.\n";
 //    Litelog(LEVEL_INFO, "SerializeState finish.\n");
 
+    //LOG(INFO)<<"------------------------MainSet---------------------------\n";
+
     return 0;
 }
 
 void LiteDriver::MainQuit(){
     start->FinishAllTrajectory();
     start->RunFinalOptimization();
-
     start->SerializeState(save_state_filename);
 
-    SaveMap(ALL, "test");
+    //SaveMap(ALL, "test");
+
+    //LOG(INFO)<<"------------------------MainQuit---------------------------\n";
+
+    //------------------------Test Begin----------------------------
+    //SaveMap(ALL, "test");
+
+
+    //句柄创建和已使用地图接口测试
+    test_slam = _rock_slam_create(ROCK_SLAM_SYSTEM_LASER); //创建句柄
+    rock_rect_t* test_rect =(rock_rect_t*)malloc(sizeof(rock_rect_t));
+    _rock_slam_map_used(test_slam,test_rect);
+
+    //获取地图接口测试
+    uint32_t  size = 1024*1024*sizeof(rock_occupied_value_t) ;
+//    rock_occupied_value_t* buffer = (rock_occupied_value_t*)malloc(size);
+    rock_occupied_value_t* buffer = new rock_occupied_value_t[size];
+    _rock_slam_map(test_slam, buffer, size);
+
+    //锁地图接口测试
+    rect_lock = (rock_rect_t*)malloc(sizeof(rock_rect_t));
+    gridmap_lock = new rock_occupied_value_t[1024*1024];
+
+    _rock_slam_lock(test_slam,true);
+
+
+    //------------------------Test End----------------------------
 
     //关闭定时器，防止内存泄露
     if(fds[0].fd != -1){
@@ -409,6 +437,9 @@ void LiteDriver::SetTimer(struct pollfd *fds){
 }
 
 void LiteDriver::Main(){
+
+    //LOG(INFO)<<"------------------------Main---------------------------\n";
+
     //启动初始化
     Litelog(LEVEL_INFO, "Debug:%s----%d!\n", __FILE__, __LINE__);
     start->StartTrajectoryWithDefaultTopics(trajectory_options);
@@ -491,7 +522,7 @@ void LiteDriver::Main(){
             sleep(6);
         }
 
-        if(fds[0].revents & POLLIN)
+        if(fds[0].revents & POLLIN)   //处理数据
         {
             uint64_t howmany;
             if (read(fds[0].fd, &howmany, sizeof(howmany)) != sizeof(howmany))
@@ -503,7 +534,7 @@ void LiteDriver::Main(){
             start->PublishTrajectoeyStates();
         }
 
-        if(fds[1].revents & POLLIN)
+        if(fds[1].revents & POLLIN)   //处理按键
         {
             ssize_t num;
             if ((num = recv(fds[1].fd, buf, MAXDATASIZE, 0)) == -1)
@@ -549,7 +580,7 @@ void LiteDriver::Main(){
                     Litelog(LEVEL_ERROR, "command error!\n");
             }
         }
-        if(fds[2].revents & POLLIN)
+        if(fds[2].revents & POLLIN)    //处理碰撞
         {
             uint64_t howmany;
             if (read(fds[2].fd, &howmany, sizeof(howmany)) != sizeof(howmany))
@@ -670,7 +701,7 @@ void LiteDriver::UpdateSpeed(){
 }
 
 void LiteDriver::SaveMap(MapType maptype, char const* path){
-    double resolution = 0.05;
+    double resolution = 0.05;  //格子的分辨率，5cm
     //获取所有子图
     std::map<::cartographer::mapping::SubmapId, ::cartographer::io::SubmapSlice> submap_slices;
     for (const auto& submap_id_data: start->map_builder_bridge()->
@@ -741,12 +772,12 @@ void LiteDriver::SaveMap(MapType maptype, char const* path){
         //重置地图
         memset(*grid_map.occupied_value, 0, sizeof(rock_occupied_value_t)*1024*1024);
 
-        {
+        {   //开始填地图
             //坐标原点
             const int origin_x = result.origin.x();  //是否从0开始计算
             const int origin_y = result.origin.y();
 //            auto result = ::cartographer::io::PaintSubmapSlices(submap_slices, resolution);
-            const int width = cairo_image_surface_get_width(result.surface.get());
+            const int width = cairo_image_surface_get_width(result.surface.get());   //获取拼好后地图的宽和高
             const int height = cairo_image_surface_get_height(result.surface.get());
             const uint32_t* pixel_data = reinterpret_cast<uint32_t*>(
                     cairo_image_surface_get_data(result.surface.get()));
@@ -777,7 +808,7 @@ void LiteDriver::SaveMap(MapType maptype, char const* path){
 
             for (int y = 0; y < height; ++y) {
 
-                arr_final = arr_y * 1024 + arr_x;
+                arr_final = arr_y * 1024 + arr_x;     //计算位置
                 ++arr_y;
 
                 for (int x = 0; x < width; ++x) {
@@ -863,6 +894,7 @@ void LiteDriver::SaveMap(MapType maptype, char const* path){
 }
 
 //修改submap的构造，不使用proto
+//此方法用于处理submap,使之成为可以拼接的状态
 void LiteDriver::FillSubmapSlice(
         const ::cartographer::transform::Rigid3d& global_submap_pose,
         const ::cartographer::mapping::proto::Submap& proto,
@@ -884,6 +916,349 @@ void LiteDriver::FillSubmapSlice(
     submap_slice->surface =
             ::cartographer::io::DrawTexture(pixels.intensity, pixels.alpha, texture_proto.width(),
                                             texture_proto.height(), &submap_slice->cairo_data);
+}
+
+//获取全局位姿
+::cartographer::transform::Rigid3d LiteDriver::getCurGlobalPose(const int trajectory_id)
+{
+    return start->map_builder_bridge()->map_builder()->pose_graph()->GetLocalToGlobalTransform(trajectory_id);
+}
+//局部位姿
+::cartographer::transform::Rigid3d LiteDriver::getCurLocalPose()
+{
+    return start->map_builder_bridge()->GetTrajectoryStates().begin()->second.local_slam_data->local_pose;
+}
+
+//北京公司要求接口
+//创建slam句柄
+rock_slam_t LiteDriver::_rock_slam_create(RockSlamSystem system)
+{
+    rock_slam_t myslam =(rock_slam_t)malloc(sizeof(rock_slam));
+
+    if(system == ROCK_SLAM_SYSTEM_LASER)
+    {
+        myslam->trajectory_id = 0;
+        new(&(myslam->sensor_id_laser))std::string;
+        new(&(myslam->sensor_id_multi_laser))std::string;
+        new(&(myslam->sensor_id_imu))std::string;
+        new(&(myslam->sensor_id_odo))std::string;
+
+        myslam->sensor_id_laser = "scan";
+        myslam->sensor_id_multi_laser = "echoes";
+        myslam->sensor_id_imu = "imu";
+        myslam->sensor_id_odo = "odom";
+
+    }
+
+    return myslam;
+}
+//释放slam句柄
+void LiteDriver::_rock_slam_release(rock_slam_t* slam)
+{
+    free(&slam);
+}
+
+//move方法向slam传入odo和gyro数据
+void LiteDriver::_rock_slam_move(rock_slam_t slam,rock_motion_t const* motion)
+{
+
+}
+
+//observe方法向slam传入laser数据
+void LiteDriver::_rock_slam_observe(rock_slam_t slam, rock_observation_t const* observation)
+{
+
+}
+
+//设置日志函数
+void LiteDriver::_rock_slam_set_logger(rock_logger_t logger)
+{
+    mylogfunc = logger;
+}
+
+//设置日志级别
+void LiteDriver::_rock_slam_set_log_level(uint32_t level)
+{
+    log_level = level;
+}
+
+//获取当前地图上已使用的区域
+void LiteDriver::_rock_slam_map_used(rock_slam_t slam, rock_rect_t* rect) {
+    if(lockflag)
+    {
+        rect = rect_lock;  //直接返回保存在本地的数据
+
+        //测试代码，将结果保存在文件中方便查看
+        {
+            std::ostringstream info;
+
+            info << "rect size width = "<< rect->size.width << "\n";
+            info << "rect size height = "<< rect->size.height << "\n";
+            info << "rect point x = "<< rect->point.x.grid << "\n";
+            info << "rect point y = "<< rect->point.y.grid << "\n";
+
+            std::ofstream ofstream_usedmap("map_used_rect_lock.txt");
+            if(!ofstream_usedmap)
+                return;
+            ofstream_usedmap << info.str();
+            ofstream_usedmap.close();
+        }
+
+        return ;
+    }
+
+
+    double resolution = 0.05;  //格子的分辨率，5cm
+    //获取所有子图
+    std::map<::cartographer::mapping::SubmapId, ::cartographer::io::SubmapSlice> submap_slices;
+    for (const auto &submap_id_data: start->map_builder_bridge()->
+            map_builder()->pose_graph()->GetAllSubmapData()) {
+        ::cartographer::mapping::proto::SerializedData proto;
+        auto *submap_proto = proto.mutable_submap();
+        submap_proto->mutable_submap_id()->set_trajectory_id(submap_id_data.id.trajectory_id);
+        submap_proto->mutable_submap_id()->set_submap_index(submap_id_data.id.submap_index);
+        submap_id_data.data.submap->ToProto(submap_proto, true);
+
+        const ::cartographer::mapping::SubmapId id{
+                submap_id_data.id.trajectory_id,
+                submap_id_data.id.submap_index
+        };
+
+        //此处获得的子图pose已经转换过，是相对于全局的
+        FillSubmapSlice(submap_id_data.data.pose, *submap_proto, &submap_slices[id]);
+
+    }
+
+    //拼接子图
+    auto result = ::cartographer::io::PaintSubmapSlices(submap_slices, resolution);
+    //坐标原点
+    const int origin_x = result.origin.x();  //是否从0开始计算
+    const int origin_y = result.origin.y();
+//            auto result = ::cartographer::io::PaintSubmapSlices(submap_slices, resolution);
+    const int width = cairo_image_surface_get_width(result.surface.get());   //获取拼好后地图的宽和高
+    const int height = cairo_image_surface_get_height(result.surface.get());
+    const uint32_t *pixel_data = reinterpret_cast<uint32_t *>(
+            cairo_image_surface_get_data(result.surface.get()));
+
+    //坐标最值的记录，用于裁剪地图
+    rect->size.width = width;
+    rect->size.height = height;
+    rect->point.x.grid = -origin_x;
+    rect->point.y.grid = -origin_y;
+
+
+    //测试代码，将结果保存在文件中方便查看
+    {
+        std::ostringstream info;
+
+        info << "rect size width = "<< rect->size.width << "\n";
+        info << "rect size height = "<< rect->size.height << "\n";
+        info << "rect point x = "<< rect->point.x.grid << "\n";
+        info << "rect point y = "<< rect->point.y.grid << "\n";
+
+        std::ofstream ofstream_usedmap("map_used_rect.txt");
+        if(!ofstream_usedmap)
+            return;
+        ofstream_usedmap << info.str();
+        ofstream_usedmap.close();
+    }
+
+//    std::ostringstream info;
+//
+//    info << "rect size width = "<< rect->size.width << "\n";
+//    info << "rect size height = "<< rect->size.height << "\n";
+//    info << "rect point x = "<< rect->point.x.grid << "\n";
+//    info << "rect point y = "<< rect->point.y.grid << "\n";
+//
+//    std::ofstream ofstream_usedmap("map_used_rect.txt");
+//    if(!ofstream_usedmap)
+//        return;
+//    ofstream_usedmap << info.str();
+//    ofstream_usedmap.close();
+
+}
+
+//获取当前完整三值（unknown，free，obstacle）地图的一维数组
+void LiteDriver::_rock_slam_map(rock_slam_t slam, rock_occupied_value_t* buffer, rock_size_t size)
+{
+
+    //LOG(INFO)<<"------------------------_rock_slam_map---------------------------\n";
+
+    if(lockflag)
+    {
+        memset(buffer,0, sizeof(size));
+        buffer = gridmap_lock;      //直接返回板寸在本地的地图数据
+
+        //测试代码：
+        //将保存的数据存储到文件中方便查看
+        {
+            //memset(buffer, 0, sizeof(size));
+
+            std::ostringstream info_map;
+
+            //这部分应在上面进行裁剪，将地图按照已使用，全部，更新进行提供
+            for (int i = 0; i < 1024; ++i) {
+                for (int j = 0; j < 1024; ++j) {
+                    info_map << std::setw(3) << (int)buffer[i*1024+j] << " ";
+                }
+                info_map << std::endl;
+            }
+            std::ofstream ofstream_allmap("map_all_buffer_lock.txt");
+            if(!ofstream_allmap)
+                return;
+            ofstream_allmap << info_map.str();
+            ofstream_allmap.close();
+        }
+
+        return ;
+    }
+
+
+    rock_rect_t* rect = (rock_rect_t*)malloc(sizeof(rock_rect_t));
+
+    double resolution = 0.05;  //格子的分辨率，5cm
+    //获取所有子图
+    std::map<::cartographer::mapping::SubmapId, ::cartographer::io::SubmapSlice> submap_slices;
+    for (const auto& submap_id_data: start->map_builder_bridge()->
+            map_builder()->pose_graph()->GetAllSubmapData()) {
+        ::cartographer::mapping::proto::SerializedData proto;
+        auto* submap_proto = proto.mutable_submap();
+        submap_proto->mutable_submap_id()->set_trajectory_id(submap_id_data.id.trajectory_id);
+        submap_proto->mutable_submap_id()->set_submap_index(submap_id_data.id.submap_index);
+        submap_id_data.data.submap->ToProto(submap_proto, true);
+
+        const ::cartographer::mapping::SubmapId id{
+                submap_id_data.id.trajectory_id,
+                submap_id_data.id.submap_index
+        };
+
+        //此处获得的子图pose已经转换过，是相对于全局的
+        FillSubmapSlice(submap_id_data.data.pose, *submap_proto, &submap_slices[id]);
+
+    }
+
+    //拼接子图
+    auto result = ::cartographer::io::PaintSubmapSlices(submap_slices, resolution);
+    {
+        //重置地图
+        memset((rock_occupied_value_t *)buffer, 0, sizeof(size));
+
+        {   //开始填地图
+            //坐标原点
+            const int origin_x = result.origin.x();  //是否从0开始计算
+            const int origin_y = result.origin.y();
+//            auto result = ::cartographer::io::PaintSubmapSlices(submap_slices, resolution);
+            const int width = cairo_image_surface_get_width(result.surface.get());   //获取拼好后地图的宽和高
+            const int height = cairo_image_surface_get_height(result.surface.get());
+            const uint32_t* pixel_data = reinterpret_cast<uint32_t*>(cairo_image_surface_get_data(result.surface.get()));
+
+            //坐标最值的记录，用于裁剪地图
+            rect->size.width =  width;
+            rect->size.height =  height;
+            rect->point.x.grid = -origin_x;
+            rect->point.y.grid = -origin_y;
+
+            //FREE:255,OBSTACLE:1,UNKNOWN:0
+            int value = 0;
+
+            //数组坐标系的起始位置
+            int arr_x = -origin_x + 512;
+            int arr_y = -origin_y + 512;
+            LOG(INFO) << "origin_x:" << origin_x << std::endl;
+            LOG(INFO) << "origin_y:" << origin_y << std::endl;
+            LOG(INFO) << "height:" << height << std::endl;
+            LOG(INFO) << "width:" << width << std::endl;
+
+            //数组中的一维坐标
+            int arr_final;
+//            rock_occupied_value_t *arr_add = static_cast<rock_occupied_value_t*>(*grid_map.occupied_value);
+            int local_start = 0;
+
+            std::ostringstream info1;
+
+            for (int y = 0; y < height; ++y) {
+
+                arr_final = arr_y * 1024 + arr_x;
+                ++arr_y;
+
+                for (int x = 0; x < width; ++x) {
+                    const uint32_t packed = pixel_data[y * width + x];
+                    const unsigned char color = packed >> 16;
+                    const unsigned char observed = packed >> 8;
+                    if(observed == 0){
+                        value = 0;
+                    }else {
+                        value = ::cartographer::common::RoundToInt((1. - color / 255.) * 100.);
+                        if(value <= 50){   //TODO:区分障碍还是无障碍的阈值，还可以再调整。
+                            value = 255;
+                        }else {
+                            value = 1;
+                        }
+                    }
+                    //所填的值先转换到地图坐标系，再转换到数组坐标系
+//                    LOG(INFO) << __LINE__ << ":" << arr_final << std::endl;
+                    //可以在这将地图分为两种填充
+                    //全部地图
+                    buffer[arr_final++] = static_cast<rock_occupied_value_t >(value);
+
+                }
+
+            }
+
+        }
+
+        //测试代码：
+        //将保存的数据存储到文件中方便查看
+        {
+            //memset(buffer, 0, sizeof(size));
+
+            std::ostringstream info_map;
+
+            //这部分应在上面进行裁剪，将地图按照已使用，全部，更新进行提供
+            for (int i = 0; i < 1024; ++i) {
+                for (int j = 0; j < 1024; ++j) {
+                    info_map << std::setw(3) << (int)buffer[i*1024+j] << " ";
+                }
+                info_map << std::endl;
+            }
+            std::ofstream ofstream_allmap("map_all_buffer.txt");
+            if(!ofstream_allmap)
+                return;
+            ofstream_allmap << info_map.str();
+            ofstream_allmap.close();
+        }
+    }
+
+}
+
+//锁地图
+void LiteDriver::_rock_slam_lock(rock_slam_t slam, bool lock)
+{
+    if(lockflag == lock)
+    {
+        return ;
+    }else{
+
+        if(lock)
+        {
+            _rock_slam_map_used(slam,rect_lock);             //存下锁住地图时刻的已使用区域和地图
+            _rock_slam_map(slam,gridmap_lock,1024*1024);
+
+        }else{
+            memset(gridmap_lock,0,sizeof(1024*1024));       //清空保存在本地的地图
+        }
+
+        lockflag = lock;    //必须先存副本再置锁标志位
+
+        return ;
+    }
+
+}
+
+//查询地图是否已锁
+void LiteDriver::_rock_slam_locked(rock_slam_t slam, bool* locked)
+{
+    *locked = lockflag;
 }
 
 void* UpdateSpeedThread(void* obj){

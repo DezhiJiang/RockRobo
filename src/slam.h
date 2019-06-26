@@ -11,7 +11,17 @@ extern "C" {
 #endif
 
 typedef struct {
-} * rock_slam_t;
+	int trajectory_id ;          //轨迹id
+
+	//对应sensor_id是其topic的名字
+	std::string sensor_id_laser ;
+	std::string sensor_id_multi_laser ;
+	std::string sensor_id_imu ;
+	std::string sensor_id_odo ;
+
+}rock_slam,  *rock_slam_t;
+
+
 
 enum RockSlamSystem {
 	ROCK_SLAM_SYSTEM_LASER  = 0,

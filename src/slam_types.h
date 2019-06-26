@@ -100,8 +100,8 @@ typedef struct {
 } rock_size_2d_t;
 
 typedef struct {
-	rock_point_2d_t point;
-	rock_size_2d_t  size;
+	rock_point_2d_t point;  //起点坐标
+	rock_size_2d_t  size;   //宽和高
 } rock_rect_t;
 
 typedef struct {
@@ -119,8 +119,8 @@ typedef struct {
 typedef struct {
 	uint32_t    id;
 	rock_size_t count;
-	rock_beam_t beams[0];
-} rock_scan_t;
+	rock_beam_t beams[0]; //深度值
+} rock_scan_t;     //激光雷达扫描的值
 
 typedef struct {
 	uint32_t    type;
@@ -129,25 +129,25 @@ typedef struct {
 } rock_image_t;    //for VSLAM?
 
 typedef struct {
-	rock_int_t left, right;
-} rock_wheel_t;
+	rock_int_t left, right;  //轮子速度
+} rock_wheel_t;  //轮子
 
 typedef struct {
 	rock_metre_per_sec2_t x, y, z;
-} rock_acc_t;
+} rock_acc_t;    //三轴加速度
 
 typedef struct {
-	rock_radian_per_sec_t roll, pitch, yaw;
+	rock_radian_per_sec_t roll, pitch, yaw;   //三种角
 } rock_angular_vel_3d_t;
 
 typedef struct {
-	rock_euler_t          euler;
-	rock_angular_vel_3d_t vel;
-} rock_gyro_t;
+	rock_euler_t          euler; //欧拉角
+	rock_angular_vel_3d_t vel;   //角速度
+} rock_gyro_t;       //陀螺仪
 
 typedef struct {
-	rock_metre_per_sec_t  v;
-	rock_radian_per_sec_t w;
+	rock_metre_per_sec_t  v;   //线速度
+	rock_radian_per_sec_t w;   //角速度
 } rock_velocity_t;
 
 

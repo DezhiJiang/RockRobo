@@ -90,23 +90,6 @@ namespace RockRobo{
         return status_response;
     }
 
-    void Start::SerializeState(const std::string &filename) {
-        carto::common::MutexLocker lock(&mutex_);
-        CHECK(map_builder_bridge_.SerializeState(filename))
-              << "Could not write state.";
-    }
-
-    void Start::LoadState(const std::string& state_filename,bool load_frozen_state)
-    {
-        carto::common::MutexLocker lock(&mutex_);
-        map_builder_bridge_.LoadState(state_filename,load_frozen_state);
-    }
-
-    void Start::getNewTrajectoryID(const std::string& state_filename)
-    {
-        map_builder_bridge_.getNewTrajectoryID(state_filename);
-    }
-
     void Start::AddExtrapolator(int trajectory_id, const RockRobo::TrajectoryOptions &options) {
         constexpr double kExtrapolationEstimationTimeSec = 0.001;
         CHECK(extrapolators_.count(trajectory_id) == 0);
@@ -232,9 +215,7 @@ namespace RockRobo{
     ///DONE:将imu和odometry合为一个
     void Start::HandleImuAndOdometryMessage(int trajectory_id, const std::string &sensor_id_imu,
                                       const std::string &sensor_id_odo, double time, void *pData, int skip_odo) {
-        LOG(INFO)<<"------HandleImuAndOdometryMessage start-------\n";
         carto::common::MutexLocker lock(&mutex_);
-        LOG(INFO)<<trajectory_id;
 
         //TODO:此处的判断是否能统一需要验证
         if(!sensor_samplers_.at(trajectory_id).odometry_sampler.Pulse() ||
@@ -243,7 +224,6 @@ namespace RockRobo{
                     sensor_id_imu, sensor_id_odo);
             return;
         }
-        LOG(INFO)<<"------HandleImuAndOdometryMessage middle-------\n";
         auto sensor_bridge_ptr = map_builder_bridge_.sensor_bridge(trajectory_id);
         ///DONE:将ToData的参数改为const
         ///两个数据是否应该分别上锁，分别添加
@@ -257,7 +237,6 @@ namespace RockRobo{
         }
         sensor_bridge_ptr->HandleImuAndOdometryMessage(sensor_id_imu, sensor_id_odo, time, pData, skip_odo);
 
-        LOG(INFO)<<"------HandleImuAndOdometryMessage finish-------\n";
     }
 
     void Start::HandleOdometryMessage(int trajectory_id, const std::string &sensor_id,
@@ -306,6 +285,46 @@ namespace RockRobo{
                 trajectory_state.local_slam_data->local_pose);
             }
         }
+    }
+
+    //新添加的接口
+    void Start::SerializeState(const std::string &filename) {
+        carto::common::MutexLocker lock(&mutex_);
+        CHECK(map_builder_bridge_.SerializeState(filename))
+        << "Could not write state.";
+    }
+
+    void Start::LoadState(const std::string& state_filename,bool load_frozen_state)
+    {
+        carto::common::MutexLocker lock(&mutex_);
+        map_builder_bridge_.LoadState(state_filename,load_frozen_state);
+    }
+
+    void Start::getNewTrajectoryID(const std::string& state_filename)
+    {
+        map_builder_bridge_.getNewTrajectoryID(state_filename);
+    }
+
+
+    //用于新处理imu和里程计接口的辅助函数
+    void Start::HandleImuAndOdometryMessage(rock_slam_t slam,rock_motion_t const* motion)
+    {
+//        carto::common::MutexLocker lock(&mutex_);
+//
+//        //TODO:此处的判断是否能统一需要验证
+//        if(!sensor_samplers_.at(slam->trajectory_id).odometry_sampler.Pulse() ||
+//           !sensor_samplers_.at(slam->trajectory_id).imu_sampler.Pulse()){
+//            Litelog(LEVEL_INFO, "Imu and odo data Pulse, sensor_id_imu:%s;sensor_id_odo:%s\n",
+//                    slam->sensor_id_imu, slam->sensor_id_odo);
+//            return;
+//        }
+//        auto sensor_bridge_ptr = map_builder_bridge_.sensor_bridge(slam->trajectory_id);
+//
+//        auto imu_data_ptr = sensor_bridge_ptr->ToImuData(time, pData);
+//        if(imu_data_ptr != nullptr){
+//            extrapolators_.at(slam->trajectory_id).AddImuData(*imu_data_ptr);
+//        }
+//        sensor_bridge_ptr->HandleImuAndOdometryMessage(sensor_id_imu, sensor_id_odo, time, pData, skip_odo);
     }
 }
 

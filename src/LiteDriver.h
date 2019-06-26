@@ -21,6 +21,7 @@
 //以下头文件用于保存地图
 #include <eigen3/Eigen/Core>
 #include <eigen3/Eigen/Geometry>
+#include "slam.h"
 #include "slam_types.h"
 #include "slam_error.h"
 
@@ -76,6 +77,7 @@ public:
     }GridMap;   //定义一个结构体，没有typedef则是定义的同时进行声明
     GridMap grid_map;
 
+    //地图类别
     enum MapType{
         ALL = 1,
         USED,
@@ -112,13 +114,11 @@ private:
     //void ProcessGyroAndOdoData(void* pData);
 
     void SendSpeedCMD(double lineSpeed, double yawSpeed, bool force = false);
-
     void BumperSet();
 
     ///设置定时器
 //    void SetTimer(double time, struct pollfd *fds);
     void SetTimer(struct pollfd *fds);
-
     //设置普通定时器，用于解决碰撞问题
     void InitTimer(struct pollfd *fds);
     //这个定时器只触发一次
@@ -143,11 +143,42 @@ private:
 
     std::map<std::pair<int, int>, std::vector<std::pair<player_devaddr_t, ProcessFun>>> m_register_table;
 
-    //保存地图的接口
+
 public:
-    void SaveMap(MapType maptype, char const* path);
+    void SaveMap(MapType maptype, char const* path);   //保存地图的接口
+
+    //新添加的接口
+    ::cartographer::transform::Rigid3d getCurGlobalPose(const int trajectory_id);  //获取全局位姿的接口
+    ::cartographer::transform::Rigid3d getCurLocalPose();   //获取局部位姿的接口
+
+    //用于测试接口用到的结构体变量
+    rock_slam_t test_slam;     //slam句柄变量。用于测试接口
+
+    //北京公司要求接口
+    rock_slam_t _rock_slam_create(RockSlamSystem system);   //创建slam句柄
+    void _rock_slam_release(rock_slam_t* slam);             //释放slam句柄
+
+    void _rock_slam_move(rock_slam_t slam,rock_motion_t const* motion);              //move方法向slam传入odo和gyro数据
+    void _rock_slam_observe(rock_slam_t slam,rock_observation_t const* observation); //observe方法向slam传入laser数据
+
+    void _rock_slam_map_used(rock_slam_t slam, rock_rect_t* rect); //获取当前地图上已使用的区域
+    void _rock_slam_map(rock_slam_t slam, rock_occupied_value_t* buffer, rock_size_t size); //获取当前完整三值（unknown，free，obstacle）地图的一维数组
+    void _rock_slam_map_update(rock_slam_t slam, rock_pose_2d_t* pose); //返回单次更新的区域
+
+    rock_rect_t* rect_lock;                                      //锁住地图时的已使用地图区域
+    rock_occupied_value_t* gridmap_lock;              //锁住地图时的地图
+    bool lockflag = false;                                       //锁地图标志位
+    void _rock_slam_lock(rock_slam_t slam, bool lock);           //锁地图
+    void _rock_slam_locked(rock_slam_t slam, bool* locked);      //查询地图是否已锁
+
+    rock_logger_t mylogfunc; //日志函数
+    int32_t log_level;       //日志等级
+    void _rock_slam_set_logger(rock_logger_t logger);            //设置日志函数
+    void _rock_slam_set_log_level(uint32_t level);                //设置日志级别
+
 
 private:
+    //此方法用于处理submap,使之成为可以拼接的状态
     void FillSubmapSlice(
             const ::cartographer::transform::Rigid3d& global_submap_pose,
             const ::cartographer::mapping::proto::Submap& proto,

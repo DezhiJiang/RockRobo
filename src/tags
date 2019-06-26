@@ -4,6 +4,7 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ALL	LiteDriver.h	/^        ALL = 1,$/;"	e	enum:LiteDriver::MapType
 AddExtrapolator	start.cpp	/^    void Start::AddExtrapolator(int trajectory_id, const RockRobo::TrajectoryOptions &options) {$/;"	f	class:RockRobo::Start
 AddInterface	LiteDriver.cpp	/^bool LiteDriver::AddInterface(player_devaddr_t& addr,$/;"	f	class:LiteDriver
 AddSensorSamples	start.cpp	/^    void Start::AddSensorSamples(int trajectory_id,$/;"	f	class:RockRobo::Start
@@ -11,22 +12,24 @@ AddTrajectory	map_builder_bridge.cpp	/^    int MapBuilderBridge::AddTrajectory($
 AddTrajectory	start.cpp	/^    int Start::AddTrajectory(const RockRobo::TrajectoryOptions &options,$/;"	f	class:RockRobo::Start
 BACKLOG	LiteDriver.cpp	/^    constexpr int BACKLOG = 1;  \/\/constexpr编译期$/;"	m	namespace:__anon1	file:
 BumperSet	LiteDriver.cpp	/^void LiteDriver::BumperSet() {$/;"	f	class:LiteDriver
-COMPOSITE_LONG	SensorData.h	/^    COMPOSITE_LONG                                     = 6,$/;"	e	enum:__anon3
-CheckTrajectoryOptions	trajectory_options.cpp	/^        void CheckTrajectoryOptions(const TrajectoryOptions& options){$/;"	f	namespace:RockRobo::__anon5
+COMPOSITE_LONG	SensorData.h	/^    COMPOSITE_LONG                                     = 6,$/;"	e	enum:__anon4
+CheckTrajectoryOptions	trajectory_options.cpp	/^        void CheckTrajectoryOptions(const TrajectoryOptions& options){$/;"	f	namespace:RockRobo::__anon39
 ComputeExpectedSensorIds	start.cpp	/^    Start::ComputeExpectedSensorIds(const RockRobo::TrajectoryOptions &options,$/;"	f	class:RockRobo::Start
 ComputerepeatedTopicNames	start_constants.h	/^    std::vector<std::string> ComputerepeatedTopicNames(const std::string& topic, int num_topics){$/;"	f	namespace:RockRobo
 CreateInitialTrajectoryPose	trajectory_options.cpp	/^    CreateInitialTrajectoryPose($/;"	f	namespace:RockRobo
 CreateStartOptions	start_options.cpp	/^    StartOptions CreateStartOptions($/;"	f	namespace:RockRobo
 CreateTrajectoryOptions	trajectory_options.cpp	/^    TrajectoryOptions CreateTrajectoryOptions($/;"	f	namespace:RockRobo
-DOCK_BACK_LONG	SensorData.h	/^    DOCK_BACK_LONG                                     = 4,$/;"	e	enum:__anon3
-DOCK_BACK_SHORT	SensorData.h	/^    DOCK_BACK_SHORT                                    = 3,$/;"	e	enum:__anon3
-DefaultSensorTopics	start.cpp	/^        std::map<std::string, std::string> DefaultSensorTopics(){$/;"	f	namespace:RockRobo::__anon4
+DOCK_BACK_LONG	SensorData.h	/^    DOCK_BACK_LONG                                     = 4,$/;"	e	enum:__anon4
+DOCK_BACK_SHORT	SensorData.h	/^    DOCK_BACK_SHORT                                    = 3,$/;"	e	enum:__anon4
+DefaultSensorTopics	start.cpp	/^        std::map<std::string, std::string> DefaultSensorTopics(){$/;"	f	namespace:RockRobo::__anon38
 FIRST_TIME	LiteDriver.cpp	/^    constexpr int FIRST_TIME = 10;$/;"	m	namespace:__anon1	file:
+FillSubmapSlice	LiteDriver.cpp	/^void LiteDriver::FillSubmapSlice($/;"	f	class:LiteDriver
 FinishAllTrajectory	start.cpp	/^    void Start::FinishAllTrajectory() {$/;"	f	class:RockRobo::Start
 FinishTrajectory	map_builder_bridge.cpp	/^    void MapBuilderBridge::FinishTrajectory(const int trajectory_id) {$/;"	f	class:RockRobo::MapBuilderBridge
 FinishTrajectoryUnderLock	start.cpp	/^    bool Start::FinishTrajectoryUnderLock(int trajectory_id) {$/;"	f	class:RockRobo::Start
 FromDouble	time_conversion.cpp	/^    ::cartographer::common::Time FromDouble(double time){$/;"	f	namespace:RockRobo
 GetTrajectoryStates	map_builder_bridge.cpp	/^            MapBuilderBridge::GetTrajectoryStates() {$/;"	f	class:RockRobo::MapBuilderBridge
+GridMap	LiteDriver.h	/^    }GridMap;   \/\/定义一个结构体，没有typedef则是定义的同时进行声明$/;"	t	class:LiteDriver	typeref:struct:LiteDriver::__anon3
 HandleImuAndOdometryMessage	sensor_bridge.cpp	/^    void SensorBridge::HandleImuAndOdometryMessage(const std::string& sensor_id_imu,$/;"	f	class:RockRobo::SensorBridge
 HandleImuAndOdometryMessage	start.cpp	/^    void Start::HandleImuAndOdometryMessage(int trajectory_id, const std::string &sensor_id_imu,$/;"	f	class:RockRobo::Start
 HandleLaserScan	sensor_bridge.cpp	/^    void SensorBridge::HandleLaserScan(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
@@ -38,13 +41,13 @@ HandleOdometryMessage	sensor_bridge.cpp	/^    void SensorBridge::HandleOdometryM
 HandleOdometryMessage	start.cpp	/^    void Start::HandleOdometryMessage(int trajectory_id, const std::string &sensor_id,$/;"	f	class:RockRobo::Start
 HandleRangefinder	sensor_bridge.cpp	/^    void SensorBridge::HandleRangefinder(const std::string& sensor_id,$/;"	f	class:RockRobo::SensorBridge
 InitTimer	LiteDriver.cpp	/^void LiteDriver::InitTimer(struct pollfd *fds){$/;"	f	class:LiteDriver
-KEY_INVALID	SensorData.h	/^    KEY_INVALID                                        = 0xff,$/;"	e	enum:__anon3
-KEY_NONE	SensorData.h	/^    KEY_NONE                                           = 0,$/;"	e	enum:__anon3
-KEY_RPT_DOWN	SensorData.h	/^    KEY_RPT_DOWN                                       = 8,$/;"	e	enum:__anon3
-KEY_RPT_HOME_LONG_10	SensorData.h	/^    KEY_RPT_HOME_LONG_10                               = 14,$/;"	e	enum:__anon3
-KEY_RPT_SPOT_LONG	SensorData.h	/^    KEY_RPT_SPOT_LONG                                  = 12,$/;"	e	enum:__anon3
-KEY_RPT_SPOT_SHORT	SensorData.h	/^    KEY_RPT_SPOT_SHORT                                 = 11,$/;"	e	enum:__anon3
-KEY_VALUE	SensorData.h	/^} KEY_VALUE;$/;"	t	typeref:enum:__anon3
+KEY_INVALID	SensorData.h	/^    KEY_INVALID                                        = 0xff,$/;"	e	enum:__anon4
+KEY_NONE	SensorData.h	/^    KEY_NONE                                           = 0,$/;"	e	enum:__anon4
+KEY_RPT_DOWN	SensorData.h	/^    KEY_RPT_DOWN                                       = 8,$/;"	e	enum:__anon4
+KEY_RPT_HOME_LONG_10	SensorData.h	/^    KEY_RPT_HOME_LONG_10                               = 14,$/;"	e	enum:__anon4
+KEY_RPT_SPOT_LONG	SensorData.h	/^    KEY_RPT_SPOT_LONG                                  = 12,$/;"	e	enum:__anon4
+KEY_RPT_SPOT_SHORT	SensorData.h	/^    KEY_RPT_SPOT_SHORT                                 = 11,$/;"	e	enum:__anon4
+KEY_VALUE	SensorData.h	/^} KEY_VALUE;$/;"	t	typeref:enum:__anon4
 LASER_START	LiteDriver.cpp	/^    int LASER_START = 0;$/;"	m	namespace:__anon1	file:
 LDS_FLAG_COVER_FILTER	SensorData.h	/^static const uint16_t LDS_FLAG_COVER_FILTER = 0x2000;$/;"	v
 LDS_FLAG_DATA_INVALID	SensorData.h	/^static const uint16_t LDS_FLAG_DATA_INVALID = 0x8000;$/;"	v
@@ -62,6 +65,8 @@ Litelog	utility.h	14;"	d
 Litelog	utility.h	20;"	d
 LoadOptions	start_options.cpp	/^    std::tuple<StartOptions, TrajectoryOptions> LoadOptions($/;"	f	namespace:RockRobo
 LoadOptions	start_options.cpp	/^    void LoadOptions($/;"	f	namespace:RockRobo
+LoadState	map_builder_bridge.cpp	/^    void MapBuilderBridge::LoadState(const std::string& state_filename,bool load_frozen_state)$/;"	f	class:RockRobo::MapBuilderBridge
+LoadState	start.cpp	/^    void Start::LoadState(const std::string& state_filename,bool load_frozen_state)$/;"	f	class:RockRobo::Start
 LocalSlamData	map_builder_bridge.h	/^           struct LocalSlamData{$/;"	s	struct:RockRobo::MapBuilderBridge::TrajectoryState
 MAXDATASIZE	LiteDriver.cpp	/^    constexpr int MAXDATASIZE = 10;$/;"	m	namespace:__anon1	file:
 Main	LiteDriver.cpp	/^void LiteDriver::Main(){$/;"	f	class:LiteDriver
@@ -69,6 +74,7 @@ MainQuit	LiteDriver.cpp	/^void LiteDriver::MainQuit(){$/;"	f	class:LiteDriver
 MainSetup	LiteDriver.cpp	/^int LiteDriver::MainSetup(){$/;"	f	class:LiteDriver
 MapBuilderBridge	map_builder_bridge.cpp	/^    MapBuilderBridge::MapBuilderBridge(const RockRobo::StartOptions &start_options,$/;"	f	class:RockRobo::MapBuilderBridge
 MapBuilderBridge	map_builder_bridge.h	/^   class MapBuilderBridge{$/;"	c	namespace:RockRobo
+MapType	LiteDriver.h	/^    enum MapType{$/;"	g	class:LiteDriver
 OnLocalSlamResult	map_builder_bridge.cpp	/^    void MapBuilderBridge::OnLocalSlamResult(const int trajectory_id, const ::cartographer::common::Time time,$/;"	f	class:RockRobo::MapBuilderBridge
 PORT	LiteDriver.cpp	/^    constexpr int PORT = 1234;$/;"	m	namespace:__anon1	file:
 ProcessBumperData	LiteDriver.cpp	/^void LiteDriver::ProcessBumperData(double time_p, void* pData){$/;"	f	class:LiteDriver
@@ -86,6 +92,24 @@ ROCKROBOBRIDGE_START_CONSTANTS_H	start_constants.h	6;"	d
 ROCKROBOBRIDGE_START_H	start.h	6;"	d
 ROCKROBOBRIDGE_TIME_CONVERSION_H	time_conversion.h	6;"	d
 ROCKROBOBRIDGE_TRAJECTORY_OPTION_H	trajectory_option.h	6;"	d
+ROCK_IMAGE_TYPE_BMP	slam_types.h	/^	ROCK_IMAGE_TYPE_BMP = 2,$/;"	e	enum:__anon37
+ROCK_IMAGE_TYPE_IGN	slam_types.h	/^	ROCK_IMAGE_TYPE_IGN = 0,$/;"	e	enum:__anon37
+ROCK_IMAGE_TYPE_PGM	slam_types.h	/^	ROCK_IMAGE_TYPE_PGM = 4$/;"	e	enum:__anon37
+ROCK_IMAGE_TYPE_RAW	slam_types.h	/^	ROCK_IMAGE_TYPE_RAW = 3,$/;"	e	enum:__anon37
+ROCK_IMAGE_TYPE_YUV	slam_types.h	/^	ROCK_IMAGE_TYPE_YUV = 1,$/;"	e	enum:__anon37
+ROCK_LASER_COUNT_MAX	slam_types.h	30;"	d
+ROCK_METRE_EPSILON	slam_types.h	26;"	d
+ROCK_OCCUPIED_FREE	slam_types.h	/^	ROCK_OCCUPIED_FREE     = 255,$/;"	e	enum:__anon36
+ROCK_OCCUPIED_OBSTACLE	slam_types.h	/^	ROCK_OCCUPIED_OBSTACLE = 1$/;"	e	enum:__anon36
+ROCK_OCCUPIED_UNKNOWN	slam_types.h	/^	ROCK_OCCUPIED_UNKNOWN  = 0,$/;"	e	enum:__anon36
+ROCK_RADIAN_EPSILON	slam_types.h	27;"	d
+ROCK_REAL_MAX	slam_types.h	29;"	d
+ROCK_SLAM_E_NULL_POINTER	slam_error.h	10;"	d
+ROCK_SLAM_SYSTEM_LASER	slam.h	/^	ROCK_SLAM_SYSTEM_LASER  = 0,$/;"	e	enum:RockSlamSystem
+ROCK_SLAM_SYSTEM_VISION	slam.h	/^	ROCK_SLAM_SYSTEM_VISION = 1$/;"	e	enum:RockSlamSystem
+ROCK_SLAM_S_FALSE	slam_error.h	8;"	d
+ROCK_SLAM_S_OK	slam_error.h	7;"	d
+ROCK_WEIGHT_EPSILON	slam_types.h	28;"	d
 RegisterProcessFun	LiteDriver.cpp	/^bool LiteDriver::RegisterProcessFun(int type,$/;"	f	class:LiteDriver
 RockRobo	map_builder_bridge.cpp	/^namespace RockRobo{$/;"	n	file:
 RockRobo	map_builder_bridge.h	/^namespace RockRobo{$/;"	n
@@ -100,11 +124,13 @@ RockRobo	time_conversion.cpp	/^namespace RockRobo{$/;"	n	file:
 RockRobo	time_conversion.h	/^namespace RockRobo{$/;"	n
 RockRobo	trajectory_option.h	/^namespace RockRobo{$/;"	n
 RockRobo	trajectory_options.cpp	/^namespace RockRobo {$/;"	n	file:
+RockSlamSystem	slam.h	/^enum RockSlamSystem {$/;"	g
 RunFinalOptimization	map_builder_bridge.cpp	/^    void MapBuilderBridge::RunFinalOptimization() {$/;"	f	class:RockRobo::MapBuilderBridge
 RunFinalOptimization	start.cpp	/^    void Start::RunFinalOptimization() {$/;"	f	class:RockRobo::Start
-START_STOP_LONG	SensorData.h	/^    START_STOP_LONG                                    = 2,$/;"	e	enum:__anon3
-START_STOP_SHORT	SensorData.h	/^    START_STOP_SHORT                                   = 1,$/;"	e	enum:__anon3
+START_STOP_LONG	SensorData.h	/^    START_STOP_LONG                                    = 2,$/;"	e	enum:__anon4
+START_STOP_SHORT	SensorData.h	/^    START_STOP_SHORT                                   = 1,$/;"	e	enum:__anon4
 STRAIGHT	LiteDriver.cpp	/^        STRAIGHT$/;"	e	enum:__anon1::__anon2	file:
+SaveMap	LiteDriver.cpp	/^void LiteDriver::SaveMap(MapType maptype, char const* path){$/;"	f	class:LiteDriver
 SendSpeedCMD	LiteDriver.cpp	/^void LiteDriver::SendSpeedCMD(double lineSpeed, double yawSpeed, bool force){$/;"	f	class:LiteDriver
 SensorBridge	sensor_bridge.cpp	/^    SensorBridge::SensorBridge($/;"	f	class:RockRobo::SensorBridge
 SensorBridge	sensor_bridge.h	/^    class SensorBridge{$/;"	c	namespace:RockRobo
@@ -128,24 +154,47 @@ TrajectoryOptions	trajectory_option.h	/^    struct TrajectoryOptions {$/;"	s	nam
 TrajectorySensorSamplers	start.h	/^            TrajectorySensorSamplers(const double rangefinder_sampling_ratio,$/;"	f	struct:RockRobo::Start::TrajectorySensorSamplers
 TrajectorySensorSamplers	start.h	/^        struct TrajectorySensorSamplers{$/;"	s	class:RockRobo::Start
 TrajectoryState	map_builder_bridge.h	/^       struct TrajectoryState{$/;"	s	class:RockRobo::MapBuilderBridge
+UPDATE	LiteDriver.h	/^        UPDATE$/;"	e	enum:LiteDriver::MapType
+USED	LiteDriver.h	/^        USED,$/;"	e	enum:LiteDriver::MapType
 UpdateSpeed	LiteDriver.cpp	/^void LiteDriver::UpdateSpeed(){$/;"	f	class:LiteDriver
 UpdateSpeedThread	LiteDriver.cpp	/^void* UpdateSpeedThread(void* obj){$/;"	f
 ValidateTrajectoryOptions	start.cpp	/^    bool Start::ValidateTrajectoryOptions(const RockRobo::TrajectoryOptions &options) {$/;"	f	class:RockRobo::Start
 WHEEL_SPEED_UPDATE_INTERVAL	SensorData.h	24;"	d
+acc	slam_types.h	/^	rock_acc_t       acc;$/;"	m	struct:__anon30
+acc	slam_types.h	/^	rock_acc_t       acc;$/;"	m	struct:__anon32
+beams	slam_types.h	/^	rock_beam_t beams[0];$/;"	m	struct:__anon22
 configuration_basename	LiteDriver.cpp	/^    const std::string configuration_basename = "backpack_2d.lua";$/;"	m	namespace:__anon1	file:
 configuration_directory	LiteDriver.cpp	/^    const std::string configuration_directory = "configuration_files";$/;"	m	namespace:__anon1	file:
 connectfd	LiteDriver.h	/^    int connectfd;$/;"	m	class:LiteDriver
+count	slam_types.h	/^	rock_size_t count;$/;"	m	struct:__anon22
+data	slam_types.h	/^	uint8_t     data[0];$/;"	m	struct:__anon12
+data	slam_types.h	/^	uint8_t     data[0];$/;"	m	struct:__anon23
+den	slam_types.h	/^	int16_t den;$/;"	m	struct:__anon9
 ecef_to_local_frame_	sensor_bridge.h	/^        ::cartographer::common::optional<::cartographer::transform::Rigid3d> ecef_to_local_frame_;$/;"	m	class:RockRobo::SensorBridge
+euler	slam_types.h	/^	rock_euler_t          euler;$/;"	m	struct:__anon27
+euler	slam_types.h	/^	rock_euler_t    euler;$/;"	m	struct:__anon16
 extrapolators_	start.h	/^        std::map<int, ::cartographer::mapping::PoseExtrapolator> extrapolators_;$/;"	m	class:RockRobo::Start
 fds	LiteDriver.cpp	/^    struct pollfd fds[3];$/;"	m	namespace:__anon1	typeref:struct:__anon1::pollfd	file:
 fixed_frame_pose_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler fixed_frame_pose_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
 fixed_frame_pose_sampling_ratio	trajectory_option.h	/^        double fixed_frame_pose_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+flag	slam_types.h	/^	uint16_t     flag;$/;"	m	struct:__anon21
+front	slam_types.h	/^	bool             left, front, right;$/;"	m	struct:__anon33
 g_imu_odom_data	sensor_bridge.cpp	/^    player_position3d_data_t g_imu_odom_data;$/;"	m	namespace:RockRobo	file:
 g_imu_odom_time	sensor_bridge.cpp	/^    double g_imu_odom_time = 0;$/;"	m	namespace:RockRobo	file:
 g_skip	LiteDriver.cpp	/^    bool g_skip = false;$/;"	m	namespace:__anon1	file:
 g_stop_odo	LiteDriver.cpp	/^    bool g_stop_odo = false;$/;"	m	namespace:__anon1	file:
+getNewTrajectoryID	map_builder_bridge.cpp	/^    void MapBuilderBridge::getNewTrajectoryID(const std::string& state_filename) {$/;"	f	class:RockRobo::MapBuilderBridge
+getNewTrajectoryID	start.cpp	/^    void Start::getNewTrajectoryID(const std::string& state_filename)$/;"	f	class:RockRobo::Start
+grid	slam_types.h	/^		rock_grid_t  grid;$/;"	m	union:__anon6::__anon7
+grid_map	LiteDriver.h	/^    GridMap grid_map;$/;"	m	class:LiteDriver
+gyro	slam_types.h	/^	rock_gyro_t      gyro;$/;"	m	struct:__anon30
+gyro	slam_types.h	/^	rock_gyro_t      gyro;$/;"	m	struct:__anon32
+height	slam_types.h	/^	rock_size_t width, height;$/;"	m	struct:__anon18
+id	slam_types.h	/^	uint32_t    id;$/;"	m	struct:__anon22
+image	slam_types.h	/^		rock_image_t image;$/;"	m	union:__anon34::__anon35
 imu_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler imu_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
 imu_sampling_ratio	trajectory_option.h	/^        double imu_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+intensity	slam_types.h	/^	uint16_t     intensity;$/;"	m	struct:__anon21
 kConstraintListTopic	start_constants.h	/^    constexpr char kConstraintListTopic[] = "constraint_list";$/;"	m	namespace:RockRobo
 kFdNum	LiteDriver.cpp	/^    constexpr int kFdNum = 3;$/;"	m	namespace:__anon1	file:
 kFinishTrajectoryServiceName	start_constants.h	/^    constexpr char kFinishTrajectoryServiceName[] = "finish_trajectory";$/;"	m	namespace:RockRobo
@@ -168,6 +217,8 @@ kTrajectoryNodeListTopic	start_constants.h	/^    constexpr char kTrajectoryNodeL
 kWriteStateServiceName	start_constants.h	/^    constexpr char kWriteStateServiceName[] = "write_state";$/;"	m	namespace:RockRobo
 landmark_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler landmark_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
 landmarks_sampling_ratio	trajectory_option.h	/^        double landmarks_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+left	slam_types.h	/^	bool             left, front, right;$/;"	m	struct:__anon33
+left	slam_types.h	/^	rock_int_t left, right;$/;"	m	struct:__anon24
 listenfd	LiteDriver.h	/^    int listenfd;$/;"	m	class:LiteDriver
 local_pose	map_builder_bridge.h	/^               ::cartographer::transform::Rigid3d local_pose;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState::LocalSlamData
 local_slam_data	map_builder_bridge.h	/^           std::shared_ptr<const LocalSlamData> local_slam_data;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState
@@ -187,21 +238,34 @@ m_register_table	LiteDriver.h	/^    std::map<std::pair<int, int>, std::vector<st
 m_stop_driver	LiteDriver.h	/^    bool m_stop_driver;$/;"	m	class:LiteDriver
 m_update_speed_thread	LiteDriver.h	/^    pthread_t m_update_speed_thread;$/;"	m	class:LiteDriver
 m_yaw_speed	LiteDriver.h	/^    std::atomic<double> m_yaw_speed;   \/\/ rad$/;"	m	class:LiteDriver
+map_builder	map_builder_bridge.h	/^       cartographer::mapping::MapBuilderInterface* map_builder(){$/;"	f	class:RockRobo::MapBuilderBridge
 map_builder_	map_builder_bridge.h	/^       std::unique_ptr<cartographer::mapping::MapBuilderInterface> map_builder_;$/;"	m	class:RockRobo::MapBuilderBridge
+map_builder_bridge	start.h	/^        MapBuilderBridge* map_builder_bridge(){$/;"	f	class:RockRobo::Start
 map_builder_options	start_options.h	/^        ::cartographer::mapping::proto::MapBuilderOptions map_builder_options;$/;"	m	struct:RockRobo::StartOptions
 map_frame	start_options.h	/^        std::string map_frame;$/;"	m	struct:RockRobo::StartOptions
+metre	slam_types.h	/^		rock_metre_t metre;$/;"	m	union:__anon6::__anon7
 mutex_	map_builder_bridge.h	/^       cartographer::common::Mutex mutex_;$/;"	m	class:RockRobo::MapBuilderBridge
 mutex_	start.h	/^        cartographer::common::Mutex mutex_;$/;"	m	class:RockRobo::Start
 now	time_conversion.cpp	/^    ::cartographer::common::Time now(){$/;"	f	namespace:RockRobo
+num	slam_types.h	/^	int16_t num;$/;"	m	struct:__anon9
 num_laser_scans	trajectory_option.h	/^        int num_laser_scans;$/;"	m	struct:RockRobo::TrajectoryOptions
 num_multi_echo_laser_scans	trajectory_option.h	/^        int num_multi_echo_laser_scans;$/;"	m	struct:RockRobo::TrajectoryOptions
 num_point_clouds	trajectory_option.h	/^        int num_point_clouds;$/;"	m	struct:RockRobo::TrajectoryOptions
 num_subdivisions_per_laser_scan	trajectory_option.h	/^        int num_subdivisions_per_laser_scan;$/;"	m	struct:RockRobo::TrajectoryOptions
 num_subdivisions_per_laser_scan_	sensor_bridge.h	/^        const int num_subdivisions_per_laser_scan_;$/;"	m	class:RockRobo::SensorBridge
+occupied_value	LiteDriver.h	/^        rock_occupied_value_t occupied_value[1024][1024];$/;"	m	struct:LiteDriver::__anon3
 odom_frame	trajectory_option.h	/^        std::string odom_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
 odometry_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler odometry_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
 odometry_sampling_ratio	trajectory_option.h	/^        double odometry_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+pitch	slam_types.h	/^	rock_radian_per_sec_t roll, pitch, yaw;$/;"	m	struct:__anon26
+pitch	slam_types.h	/^	rock_radian_t roll, pitch, yaw;$/;"	m	struct:__anon8
 player_driver_init	LiteDriver.cpp	/^int player_driver_init(DriverTable *table) {$/;"	f
+point	slam_types.h	/^	rock_point_2d_t point;$/;"	m	struct:__anon15
+point	slam_types.h	/^	rock_point_2d_t point;$/;"	m	struct:__anon19
+point	slam_types.h	/^	rock_point_3d_t point;$/;"	m	struct:__anon16
+polar	slam_types.h	/^	rock_polar_t polar;$/;"	m	struct:__anon21
+pose	slam_types.h	/^	rock_pose_2d_t   pose;$/;"	m	struct:__anon29
+pose	slam_types.h	/^	rock_pose_2d_t   pose;$/;"	m	struct:__anon32
 pose_publish_period_sec	start_options.h	/^        double pose_publish_period_sec;$/;"	m	struct:RockRobo::StartOptions
 provide_odom_frame	trajectory_option.h	/^        bool provide_odom_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
 publish_frame_projected_to_2d	trajectory_option.h	/^        bool publish_frame_projected_to_2d;$/;"	m	struct:RockRobo::TrajectoryOptions
@@ -210,7 +274,63 @@ published_to_tracking	map_builder_bridge.h	/^           std::unique_ptr<cartogra
 range_data_in_local	map_builder_bridge.h	/^               ::cartographer::sensor::RangeData range_data_in_local;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState::LocalSlamData
 rangefinder_sampler	start.h	/^            ::cartographer::common::FixedRatioSampler rangefinder_sampler;$/;"	m	struct:RockRobo::Start::TrajectorySensorSamplers
 rangefinder_sampling_ratio	trajectory_option.h	/^        double rangefinder_sampling_ratio;$/;"	m	struct:RockRobo::TrajectoryOptions
+region	LiteDriver.h	/^        rock_rect_t region;  \/\/地图区域,包括起始点和大小$/;"	m	struct:LiteDriver::__anon3
+rho	slam_types.h	/^	rock_metre_t  rho;$/;"	m	struct:__anon20
+right	slam_types.h	/^	bool             left, front, right;$/;"	m	struct:__anon33
+right	slam_types.h	/^	rock_int_t left, right;$/;"	m	struct:__anon24
+rock_acc_t	slam_types.h	/^} rock_acc_t;$/;"	t	typeref:struct:__anon25
+rock_angular_vel_3d_t	slam_types.h	/^} rock_angular_vel_3d_t;$/;"	t	typeref:struct:__anon26
+rock_beam_t	slam_types.h	/^} rock_beam_t;$/;"	t	typeref:struct:__anon21
+rock_bool_t	slam_types.h	/^typedef volatile bool rock_bool_t;$/;"	t
+rock_buffer_t	slam_types.h	/^} rock_buffer_t;$/;"	t	typeref:struct:__anon12
+rock_bumper_t	slam_types.h	/^} rock_bumper_t;$/;"	t	typeref:struct:__anon33
+rock_byte_t	slam_types.h	/^} rock_byte_t;$/;"	t	typeref:struct:__anon11
+rock_command_t	slam_types.h	/^} rock_command_t;$/;"	t	typeref:struct:__anon31
+rock_coord_t	slam_types.h	/^} rock_coord_t;$/;"	t	typeref:struct:__anon6
+rock_counting_value_t	slam_types.h	/^typedef uint8_t rock_counting_value_t;$/;"	t
+rock_euler_t	slam_types.h	/^} rock_euler_t;$/;"	t	typeref:struct:__anon8
+rock_grid_t	slam_types.h	/^typedef int32_t rock_grid_t;$/;"	t
+rock_gyro_t	slam_types.h	/^} rock_gyro_t;$/;"	t	typeref:struct:__anon27
+rock_image_t	slam_types.h	/^} rock_image_t;    \/\/for VSLAM?$/;"	t	typeref:struct:__anon23
+rock_imu_t	slam_types.h	/^} rock_imu_t;$/;"	t	typeref:struct:__anon30
+rock_int_t	slam_types.h	/^typedef int32_t       rock_int_t;$/;"	t
+rock_logger_t	slam_types.h	/^typedef int (* rock_logger_t)(int, int, int, char const*, char const*, ...);$/;"	t
+rock_metre_per_sec2_t	slam_types.h	/^typedef rock_metre_t  rock_metre_per_sec2_t;$/;"	t
+rock_metre_per_sec_t	slam_types.h	/^typedef rock_metre_t  rock_metre_per_sec_t;$/;"	t
+rock_metre_t	slam_types.h	/^typedef float   rock_metre_t;$/;"	t
+rock_motion_decomposition_t	slam_types.h	/^} rock_motion_decomposition_t;$/;"	t	typeref:struct:__anon17
+rock_motion_t	slam_types.h	/^} rock_motion_t;$/;"	t	typeref:struct:__anon32
+rock_observation_t	slam_types.h	/^} rock_observation_t;$/;"	t	typeref:struct:__anon34
+rock_occupied_cell_t	slam_types.h	/^} rock_occupied_cell_t;$/;"	t	typeref:struct:__anon10
+rock_occupied_value_t	slam_types.h	/^typedef uint8_t rock_occupied_value_t;$/;"	t
+rock_odometry_t	slam_types.h	/^} rock_odometry_t;$/;"	t	typeref:struct:__anon29
+rock_pixel_t	slam_types.h	/^typedef uint8_t rock_pixel_t;$/;"	t
+rock_point_2d_t	slam_types.h	/^} rock_point_2d_t;$/;"	t	typeref:struct:__anon13
+rock_point_3d_t	slam_types.h	/^} rock_point_3d_t;$/;"	t	typeref:struct:__anon14
+rock_polar_t	slam_types.h	/^} rock_polar_t;$/;"	t	typeref:struct:__anon20
+rock_pose_2d_t	slam_types.h	/^} rock_pose_2d_t;$/;"	t	typeref:struct:__anon15
+rock_pose_3d_t	slam_types.h	/^} rock_pose_3d_t;$/;"	t	typeref:struct:__anon16
+rock_radian_per_sec_t	slam_types.h	/^typedef rock_radian_t rock_radian_per_sec_t;$/;"	t
+rock_radian_t	slam_types.h	/^typedef rock_real_t rock_radian_t;$/;"	t
+rock_ratio_t	slam_types.h	/^} rock_ratio_t;$/;"	t	typeref:struct:__anon9
+rock_real_t	slam_types.h	/^typedef float         rock_real_t;$/;"	t
+rock_rect_t	slam_types.h	/^} rock_rect_t;$/;"	t	typeref:struct:__anon19
+rock_result_t	slam.h	/^typedef int32_t rock_result_t;$/;"	t
+rock_scale_t	slam_types.h	/^typedef rock_real_t rock_scale_t;$/;"	t
+rock_scan_t	slam_types.h	/^} rock_scan_t;$/;"	t	typeref:struct:__anon22
+rock_size_2d_t	slam_types.h	/^} rock_size_2d_t;$/;"	t	typeref:struct:__anon18
+rock_size_t	slam_types.h	/^typedef uint32_t      rock_size_t;$/;"	t
+rock_slam_t	slam.h	/^} * rock_slam_t;$/;"	t	typeref:struct:__anon5
+rock_timestamp_t	slam_types.h	/^typedef rock_real_t rock_timestamp_t;$/;"	t
+rock_velocity_t	slam_types.h	/^} rock_velocity_t;$/;"	t	typeref:struct:__anon28
+rock_weight_t	slam_types.h	/^typedef rock_real_t rock_weight_t;$/;"	t
+rock_wheel_t	slam_types.h	/^} rock_wheel_t;$/;"	t	typeref:struct:__anon24
+roll	slam_types.h	/^	rock_radian_per_sec_t roll, pitch, yaw;$/;"	m	struct:__anon26
+roll	slam_types.h	/^	rock_radian_t roll, pitch, yaw;$/;"	m	struct:__anon8
+rot1	slam_types.h	/^	rock_radian_t rot1;$/;"	m	struct:__anon17
+rot2	slam_types.h	/^	rock_radian_t rot2;$/;"	m	struct:__anon17
 save_state_filename	LiteDriver.cpp	/^    const std::string save_state_filename = "trajectory_state.pbstream";$/;"	m	namespace:__anon1	file:
+scan	slam_types.h	/^		rock_scan_t  scan;$/;"	m	union:__anon34::__anon35
 sensor_bridge	map_builder_bridge.cpp	/^    SensorBridge* MapBuilderBridge::sensor_bridge(const int trajectory_id){$/;"	f	class:RockRobo::MapBuilderBridge
 sensor_bridges_	map_builder_bridge.h	/^       std::unordered_map<int, std::unique_ptr<SensorBridge>> sensor_bridges_;$/;"	m	class:RockRobo::MapBuilderBridge
 sensor_id_imu	LiteDriver.cpp	/^    const std::string sensor_id_imu = "imu";$/;"	m	namespace:__anon1	file:
@@ -219,22 +339,55 @@ sensor_id_multi_laser	LiteDriver.cpp	/^    const std::string sensor_id_multi_las
 sensor_id_odo	LiteDriver.cpp	/^    const std::string sensor_id_odo = "odom";$/;"	m	namespace:__anon1	file:
 sensor_samplers_	start.h	/^        std::unordered_map<int, TrajectorySensorSamplers> sensor_samplers_;$/;"	m	class:RockRobo::Start
 sensor_to_previous_subdivision_time_	sensor_bridge.h	/^        std::map<std::string, cartographer::common::Time> sensor_to_previous_subdivision_time_;$/;"	m	class:RockRobo::SensorBridge
+size	slam_types.h	/^	rock_size_2d_t  size;$/;"	m	struct:__anon19
+size	slam_types.h	/^	rock_size_t size;$/;"	m	struct:__anon12
+size	slam_types.h	/^	rock_size_t size;$/;"	m	struct:__anon23
 start_options	LiteDriver.cpp	/^    StartOptions start_options;$/;"	m	namespace:__anon1	file:
 start_options_	map_builder_bridge.h	/^       const StartOptions start_options_;$/;"	m	class:RockRobo::MapBuilderBridge
 start_options_	start.h	/^        const StartOptions start_options_;$/;"	m	class:RockRobo::Start
 state_num	LiteDriver.cpp	/^    int state_num = 0;$/;"	m	namespace:__anon1	file:
 submap_publish_period_sec	start_options.h	/^        double submap_publish_period_sec;$/;"	m	struct:RockRobo::StartOptions
+theta	slam_types.h	/^	rock_radian_t   theta;$/;"	m	struct:__anon15
+theta	slam_types.h	/^	rock_radian_t theta;$/;"	m	struct:__anon20
 time	map_builder_bridge.h	/^               ::cartographer::common::Time time;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState::LocalSlamData
+timestamp	slam_types.h	/^	rock_timestamp_t timestamp;$/;"	m	struct:__anon29
+timestamp	slam_types.h	/^	rock_timestamp_t timestamp;$/;"	m	struct:__anon30
+timestamp	slam_types.h	/^	rock_timestamp_t timestamp;$/;"	m	struct:__anon31
+timestamp	slam_types.h	/^	rock_timestamp_t timestamp;$/;"	m	struct:__anon32
+timestamp	slam_types.h	/^	rock_timestamp_t timestamp;$/;"	m	struct:__anon33
+timestamp	slam_types.h	/^	rock_timestamp_t timestamp;$/;"	m	struct:__anon34
 tracking_frame	trajectory_option.h	/^        std::string tracking_frame;$/;"	m	struct:RockRobo::TrajectoryOptions
 trajectory_builder_	sensor_bridge.h	/^        ::cartographer::mapping::TrajectoryBuilderInterface* const trajectory_builder_;$/;"	m	class:RockRobo::SensorBridge::cartographer::mapping
 trajectory_builder_options	trajectory_option.h	/^            trajectory_builder_options;$/;"	m	struct:RockRobo::TrajectoryOptions
-trajectory_id	LiteDriver.cpp	/^    constexpr int trajectory_id = 0;$/;"	m	namespace:__anon1	file:
+trajectory_id	LiteDriver.cpp	/^    constexpr int trajectory_id = 1;$/;"	m	namespace:__anon1	file:
 trajectory_options	LiteDriver.cpp	/^    TrajectoryOptions trajectory_options;$/;"	m	namespace:__anon1	file:
 trajectory_options	map_builder_bridge.h	/^           TrajectoryOptions trajectory_options;$/;"	m	struct:RockRobo::MapBuilderBridge::TrajectoryState
 trajectory_options_	map_builder_bridge.h	/^       std::unordered_map<int, TrajectoryOptions> trajectory_options_;$/;"	m	class:RockRobo::MapBuilderBridge
 trajectory_publish_period_sec	start_options.h	/^        double trajectory_publish_period_sec;$/;"	m	struct:RockRobo::StartOptions
+trans	slam_types.h	/^	rock_metre_t  trans;$/;"	m	struct:__anon17
+type	slam_types.h	/^	uint32_t    type;$/;"	m	struct:__anon23
 use_landmarks	trajectory_option.h	/^        bool use_landmarks;$/;"	m	struct:RockRobo::TrajectoryOptions
 use_nav_sat	trajectory_option.h	/^        bool use_nav_sat;$/;"	m	struct:RockRobo::TrajectoryOptions
 use_odometry	trajectory_option.h	/^        bool use_odometry;$/;"	m	struct:RockRobo::TrajectoryOptions
+v	slam_types.h	/^	rock_metre_per_sec_t  v;$/;"	m	struct:__anon28
+value	slam_types.h	/^	rock_occupied_value_t value;$/;"	m	struct:__anon10
+value	slam_types.h	/^	uint8_t value;$/;"	m	struct:__anon11
+vel	slam_types.h	/^	rock_angular_vel_3d_t vel;$/;"	m	struct:__anon27
+velocity	slam_types.h	/^	rock_velocity_t  velocity;$/;"	m	struct:__anon31
+velocity	slam_types.h	/^	rock_velocity_t  velocity;$/;"	m	struct:__anon32
+w	slam_types.h	/^	rock_radian_per_sec_t w;$/;"	m	struct:__anon28
+wheel	slam_types.h	/^	rock_wheel_t     wheel;$/;"	m	struct:__anon29
+wheel	slam_types.h	/^	rock_wheel_t     wheel;$/;"	m	struct:__anon32
+width	slam_types.h	/^	rock_size_t width, height;$/;"	m	struct:__anon18
+x	slam_types.h	/^	rock_coord_t x, y, z;$/;"	m	struct:__anon14
+x	slam_types.h	/^	rock_coord_t x, y;$/;"	m	struct:__anon13
+x	slam_types.h	/^	rock_metre_per_sec2_t x, y, z;$/;"	m	struct:__anon25
+y	slam_types.h	/^	rock_coord_t x, y, z;$/;"	m	struct:__anon14
+y	slam_types.h	/^	rock_coord_t x, y;$/;"	m	struct:__anon13
+y	slam_types.h	/^	rock_metre_per_sec2_t x, y, z;$/;"	m	struct:__anon25
+yaw	slam_types.h	/^	rock_radian_per_sec_t roll, pitch, yaw;$/;"	m	struct:__anon26
+yaw	slam_types.h	/^	rock_radian_t roll, pitch, yaw;$/;"	m	struct:__anon8
+z	slam_types.h	/^	rock_coord_t x, y, z;$/;"	m	struct:__anon14
+z	slam_types.h	/^	rock_metre_per_sec2_t x, y, z;$/;"	m	struct:__anon25
 ~LiteDriver	LiteDriver.cpp	/^LiteDriver::~LiteDriver(){}$/;"	f	class:LiteDriver
 ~Start	start.cpp	/^    Start::~Start() { FinishAllTrajectory(); }$/;"	f	class:RockRobo::Start

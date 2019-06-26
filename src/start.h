@@ -20,6 +20,10 @@
 #include "trajectory_option.h"
 #include "time_conversion.h"
 
+#include "slam.h"
+#include "slam_types.h"
+#include "slam_error.h"
+
 namespace RockRobo{
     class Start{
     public:
@@ -37,11 +41,6 @@ namespace RockRobo{
         bool FinishTrajectoryUnderLock(int trajectory_id) REQUIRES(mutex_);
 
         void StartTrajectoryWithDefaultTopics(const TrajectoryOptions& options);
-
-        void SerializeState(const std::string& filename);
-        void LoadState(const std::string& state_filename,bool load_frozen_state);
-
-        void getNewTrajectoryID(const std::string& state_filename);
 
         //下面的函数均是调用sensor_bridge中的相应接口
         //最后一个参数标示是否跳过odo数据
@@ -61,6 +60,15 @@ namespace RockRobo{
         MapBuilderBridge* map_builder_bridge(){
             return &map_builder_bridge_;
         }
+
+        //新添加的接口
+        void SerializeState(const std::string& filename);
+        void LoadState(const std::string& state_filename,bool load_frozen_state);
+        void getNewTrajectoryID(const std::string& state_filename);
+
+        //北京要求的接口
+        void HandleImuAndOdometryMessage(rock_slam_t slam,rock_motion_t const* motion);
+
 
     private:
         //此处第二个参数是否可以用vector保存

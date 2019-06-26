@@ -48,17 +48,19 @@ namespace RockRobo{
        void RunFinalOptimization();
        std::unordered_map<int, TrajectoryState> GetTrajectoryStates() EXCLUDES(mutex_);
 
-
        SensorBridge* sensor_bridge(int trajectory_id);
-
-       bool SerializeState(const std::string& filename);
-       void LoadState(const std::string& state_filename,bool load_frozen_state);
-
-       void getNewTrajectoryID(const std::string& state_filename);
 
        cartographer::mapping::MapBuilderInterface* map_builder(){
            return map_builder_.get();
+
        };
+
+       //新加的接口
+       bool SerializeState(const std::string& filename);
+       void LoadState(const std::string& state_filename,bool load_frozen_state);
+       void getNewTrajectoryID(const std::string& state_filename);
+
+
    private:
        //下面这个回调目前来是用于可视化的，可能用于位姿优化，可以先注释测试
        void OnLocalSlamResult(
